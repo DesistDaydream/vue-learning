@@ -10,7 +10,10 @@
     <!-- 导入 vue 包 -->
     <script src="./lib/vue.global.js"></script>
 
-    <div id="app">{{ message }}</div>
+    <!-- 模板语言，当 js 代码绑定到 id 为 app 的元素时，Vue 框架将会解析 {{}} 中的内容 -->
+    <div id="app">
+        {{ message }} {{ myname }}
+    </div>
 
     <script type="module" src="./hello_world.js"></script>
 </body>
