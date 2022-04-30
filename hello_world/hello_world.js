@@ -9,4 +9,5 @@ let newApp = Vue.createApp({
 })
 
 // 将应用与页面关联起来，这里将 id 为 app 的元素挂载到一个 Vue 实例上
-newApp.mount('#app')
+let vm = newApp.mount('#app')
+// 此时，我们在浏览器的 Console 中，使用 vm.message="Hello Vue!" 以改变 message 的值
