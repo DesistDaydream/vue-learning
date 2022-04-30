@@ -1,7 +1,7 @@
 // 不知道为什么浏览器里无法使用 import，但是本地不使用 import 的话没法追踪代码，很难受。o(╯□╰)o
 // import {
 //   createApp
-// } from './node_modules/vue'
+// } from '../node_modules/vue'
 
 // 实例化一个 App。App 的 mount 方法可以将应用挂载到 DOM 元素上
 let newApp = Vue.createApp({

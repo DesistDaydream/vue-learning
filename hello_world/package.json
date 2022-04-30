@@ -1,12 +1,8 @@
 {
-  "dependencies": {
-    "hello_world": "file:hello_world-1.0.0.tgz",
-    "vue": "^3.2.33"
-  },
-  "type": "module",
   "name": "hello_world",
   "version": "1.0.0",
-  "main": "hello_world.js",
+  "description": "",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
@@ -15,5 +11,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "vue": "^3.2.33"
+  }
 }
