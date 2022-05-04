@@ -10,8 +10,8 @@ let newApp = Vue.createApp({
   // 这类似于 go 语言中的模板渲染
   data() {
     return {
-      message: 'Hello Vue!',
-      myname: "Lch"
+      title: "Vue Demo",
+      message: "Hello Vue!"
     }
   },
   // 定义 App 的方法。
@@ -29,4 +29,4 @@ let newApp = Vue.createApp({
 // mount() 方法将 App 挂载到 DOM 元素上, 并且返回一个 Vue 实例。
 // mount() 方法返回一个 Vue 实例，它可以被用来访问 App 中定义的的数据和方法。
 // 此时，我们在浏览器的 Console 、本地代码中，使用 vm.message="Hello Vue!" 以改变 message 的值
-let vm = newApp.mount('#app', true, true)
+let vm = newApp.mount('#app')
