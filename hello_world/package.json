@@ -16,8 +16,5 @@
   "dependencies": {
     "vite": "^2.9.8",
     "vue": "^3.2.33"
-  },
-  "devDependencies": {
-    "@types/vue": "^2.0.0"
   }
 }
