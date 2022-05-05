@@ -1,6 +1,8 @@
 // 使用 import 关键字导入 Vue 包
-// 浏览器里无法使用 import，需要通过打包工具将这些代码转换为 ES5 格式后，浏览器才可以解析并展示
-// 若不执行打包操作，则必须在 HTML 中以 CDN 方式导入 Vue 包。
+// 浏览器无法识别 vue，必须指定具体路径，才可以发起请求获取这个静态资源
+// 但是 vue 是一组文件的，需要通过打包工具将这一组文件转换为单一文件后，浏览器才可以获取并展示
+// 通过 vite 等编译工具可以将 vue 模块打包成单一文件，并且可以自动将这个文件转换为 js 文件，vite 编译后，import 这行将会变为 import * as Vue from '/node_modules/.vite/deps/vue.js?v=cdaa4d3a'
+// 或者也可以直接通过 CDN 的方式，在 html 文件的 script 标签中引入 Vue 包
 import * as Vue from 'vue'
 
 // 实例化一个 App。App 的 mount 方法可以将应用挂载到 DOM 元素上
