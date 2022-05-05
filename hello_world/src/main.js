@@ -1,5 +1,7 @@
-// 不知道为什么浏览器里无法使用 import，但是本地不使用 import 的话没法追踪代码，很难受。o(╯□╰)o
-// import * as Vue from 'vue'
+// 使用 import 关键字导入 Vue 包
+// 浏览器里无法使用 import，需要通过打包工具将这些代码转换为 ES5 格式后，浏览器才可以解析并展示
+// 若不执行打包操作，则必须在 HTML 中以 CDN 方式导入 Vue 包。
+import * as Vue from 'vue'
 
 // 实例化一个 App。App 的 mount 方法可以将应用挂载到 DOM 元素上
 let newApp = Vue.createApp({

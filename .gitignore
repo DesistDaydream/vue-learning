@@ -3,6 +3,7 @@ node_modules
 /dist
 vue-project
 book-store
+dist
 
 
 # local env files

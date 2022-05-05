@@ -7,11 +7,17 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "vite": "^2.9.8",
     "vue": "^3.2.33"
+  },
+  "devDependencies": {
+    "@types/vue": "^2.0.0"
   }
 }
