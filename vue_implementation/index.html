@@ -9,14 +9,7 @@
 </head>
 
 <body>
-    <!-- 导入 vue 包 -->
-    <!-- lib 目录的 js 文件来自于 https://unpkg.com/vue@3，
-        该链接来源于[官方文档，快速开始-不使用构建工具](https://staging-cn.vuejs.org/guide/quick-start.html#without-build-tools) -->
-    <script src="./lib/vue.global.js"></script>
-
-    <!-- 模板语言，当 js 代码绑定到 id 为 app 的元素时，Vue 框架将会解析 {{}} 中的内容 -->
     <div id="app">
-        <!-- 模板语法 -->
         <h2>{{ title }}</h2>
         {{ message }}
 
@@ -25,7 +18,7 @@
         <button @click="handleClick()">change</button>
     </div>
 
-    <script src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
