@@ -34,3 +34,5 @@ let newApp = Vue.createApp(Class)
 // mount() 方法返回一个 Vue 实例，它可以被用来访问 App 中定义的的数据和方法。
 // 此时，我们在浏览器的 Console 、本地代码中，使用 vm.message="Hello Vue!" 以改变 message 的值
 let vm = newApp.mount("#app")
+
+console.log(vm)
