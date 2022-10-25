@@ -5,8 +5,7 @@ import App from "./App.vue"
 
 import "./assets/main.css"
 
-// 3. 创建 App，这是 Vue Demo 程序的根
-// 使用声明的类实例化 App
+// 3. 使用导入的 ./App.vue 文件创建 App 实例，这是 Vue Demo 程序的根
 let newAPP = createApp(App)
 // mount() 方法将 App 挂载到 DOM 元素上, 并且返回一个 Vue 实例。
 // mount() 方法返回一个 Vue 实例，它可以被用来访问 App 中定义的的数据和方法。

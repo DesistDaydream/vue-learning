@@ -1,4 +1,5 @@
 <script setup>
+// 导入组件，我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 </script>
