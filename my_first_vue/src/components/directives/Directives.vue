@@ -16,7 +16,9 @@ let items = [
 
 <template>
     <h1>指令</h1>
-    指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多内置指令，包括 Template 组件中学习的 v-bind 和 v-html。
+    指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多<a href="https://cn.vuejs.org/api/built-in-directives.html">内置指令</a>，包括
+    Template 组件中学习的
+    v-bind 和 v-html。
     如果把 Vue 当做一种新的编程语言，那指令，就是 Vue 语言的 Keyword(关键字)
     <h2>if else</h2>
     <!-- v-if 与 v-else 指令 -->
