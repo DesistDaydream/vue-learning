@@ -3,8 +3,8 @@
 <script setup>
 // 这里导入根组件下的组件
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
-import HelloWorld from './components/1_HelloWorld.vue'
-import TemplateLearn from './components/2_Template.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import TemplateLearn from './components/template/Template.vue'
 </script>
 
 <template>
