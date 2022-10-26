@@ -1,9 +1,10 @@
-<!-- 该文件是 Vue 程序的根组件 -->
+<!-- 这里是 Vue 程序的根组件。这个跟根组件被绑定到了 index.html 中 id=app 的 div 元素上
+也就是说，这就是说，根组件即代表了整个页面 -->
 <script setup>
 // 这里导入根组件下的组件
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import TemplateLearn from './components/Template.vue'
 </script>
 
 <template>
@@ -11,40 +12,14 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <!-- 将 msg 变量的值传入到 HelloWorld 组件中 -->
       <HelloWorld msg="You did it!" />
+      <!-- Vue 模板语法学习 -->
+      <TemplateLearn />
     </div>
   </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
