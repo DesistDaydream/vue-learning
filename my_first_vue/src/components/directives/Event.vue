@@ -20,6 +20,7 @@ function clickArgs(params) {
 </script>
 
 <template>
+    <h1>事件触发</h1>
     <p>使用 v-on 指令（简写为 @）监听 DOM 事件，并在触发事件时执行一些 JavaScript。</p>
 
     <button v-on:click="counter++">加 1 按钮</button>

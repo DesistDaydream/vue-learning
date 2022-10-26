@@ -1,14 +1,24 @@
-<script>
+<script setup>
+import { ref } from 'vue'
+
+// 初始化表单中的变量，设为空
+let message = ref('')
+
+function commit(params) {
+}
 
 </script>
 
 <template>
-    <form>
-        卡组：<textarea name="deck" id="deck" cols="45" rows="5"></textarea>
+    <h1>表单输入绑定</h1>
+    <p>使用 v-model 指令可以简化 JavaScript 处理表单的逻辑。</p>
+    <p>通过 v-model 指令在 input、textarea、select 这几个表单标签中创建双向数据绑定</p>
+    <p>v-model 指令会监听用户的输入事件来更新数据，并在特殊场景下执行特殊处理</p>
 
-        <button name="commit">提交</button>
+    卡组：<textarea v-model="message" placeholder="输入内容" cols="45" rows="5"></textarea>
+    <button @click="commit">提交</button>
+    <p>表单内容: {{ message }}</p>
 
-    </form>
 
     <table border="1">
         <thead>
