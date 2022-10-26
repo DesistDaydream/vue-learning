@@ -11,6 +11,7 @@ let ok = true
 let message = "Hello World"
 let id = "DesistDaydream"
 // 指令
+let seen = true
 
 </script>
 
@@ -41,5 +42,9 @@ let id = "DesistDaydream"
 
     <!-- 5. Directives(指令) -->
     <!-- 指令是带有 v- 前缀的特殊 attribute。Vue 提供了许多内置指令，包括上面我们所介绍的 v-bind 和 v-html。 -->
+    <!-- v-if 与 v-else 指令 -->
+    <!-- v-if 与 v-show 指令类型，但是又有区别，详见官方文档 -->
+    <p v-if="seen">当 seen 变量为 {{ seen }} 时，将会展示本元素。注意，只要变量不为 false，则都为真，比如变量值为整型、字符串，甚至不传递变量值</p>
+    <p v-else>当 seen 变量为 {{ seen }} 时，将会展示本元素</p>
 
 </template>
