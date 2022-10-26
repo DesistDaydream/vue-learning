@@ -1,0 +1,35 @@
+<script>
+
+</script>
+
+<template>
+    <form>
+        卡组：<textarea name="deck" id="deck" cols="45" rows="5"></textarea>
+
+        <button name="commit">提交</button>
+
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>最低价</th>
+                <th>集换价</th>
+            </tr>
+        </thead>
+        <tr id="resp_price"></tr>
+    </table>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>数量</th>
+                <th>编号</th>
+                <th>最低价</th>
+                <th>集换价</th>
+            </tr>
+        </thead>
+        <tbody id="cards_list"></tbody>
+    </table>
+</template>

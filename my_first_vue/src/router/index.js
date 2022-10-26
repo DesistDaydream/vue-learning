@@ -27,6 +27,11 @@ const router = createRouter({
       name: "event",
       component: () => import("../components/directives/Event.vue"),
     },
+    {
+      path: "/directives/form",
+      name: "form",
+      component: () => import("../components/directives/Form.vue"),
+    },
   ],
 })
 

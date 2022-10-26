@@ -4,6 +4,7 @@ import { ref } from 'vue'
 
 const counter = ref(0)
 let message = ref("点击前内容")
+let args = ref("没有参数")
 
 function clickHandle(event) {
     message.value = "点击后内容"
@@ -14,7 +15,7 @@ function clickHandle(event) {
 }
 
 function clickArgs(params) {
-    console.log(params)
+    args.value = params
 }
 </script>
 
@@ -33,5 +34,5 @@ function clickArgs(params) {
 
     <button @click="clickArgs('参数一')">传递事件参数一</button>
     <button @click="clickArgs('参数二')">传递事件参数二</button>
-
+    <p>{{ args }}</p>
 </template>
