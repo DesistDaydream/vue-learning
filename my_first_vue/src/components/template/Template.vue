@@ -1,6 +1,4 @@
 <script setup>
-import Directives from './Directives.vue'
-
 // 文本插值
 let msg = "文本插值"
 // 原始 HTML
@@ -39,10 +37,4 @@ let id = "DesistDaydream"
     <p>JavaScript 表达式: {{ ok ? 'ok变量值为 true' : 'ok 变量值为 false ' }}</p>
     <p>JavaScript 表达式: {{ message.split('').reverse().join('') }}</p>
     <p :id="`list-${id}`">JavaScript 表达式: 在标签的属性中查看示例效果</p> <!-- 简写的 v-bind 指令 -->
-
-    <!-- 5. Directives(指令) -->
-    <div>
-        <Directives />
-    </div>
-
 </template>

@@ -5,6 +5,8 @@
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
 import HelloWorld from './components/hello_world/HelloWorld.vue'
 import TemplateLearn from './components/template/Template.vue'
+import Directives from './components/directives/Directives.vue'
+
 </script>
 
 <template>
@@ -16,6 +18,8 @@ import TemplateLearn from './components/template/Template.vue'
       <HelloWorld msg="You did it!" />
       <!-- 调用 TemplateLearn 组件 -->
       <TemplateLearn />
+      <!-- 调用 Directives(指令) 组件 -->
+      <Directives />
     </div>
   </header>
 </template>

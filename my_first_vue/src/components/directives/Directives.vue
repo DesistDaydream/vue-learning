@@ -16,7 +16,7 @@ let items = [
 
 <template>
     <h1>指令</h1>
-    <!-- 指令是带有 v- 前缀的特殊 attribute。Vue 提供了许多内置指令，包括上面我们所介绍的 v-bind 和 v-html。 -->
+    指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多内置指令，包括 Template 组件中学习的 v-bind 和 v-html。
     <h2>if else</h2>
     <!-- v-if 与 v-else 指令 -->
     <!-- v-if 与 v-show 指令类型，但是又有区别，详见官方文档 -->
@@ -26,7 +26,8 @@ let items = [
     <h2>for</h2>
     <!-- v-for 指令用于列表渲染。https://cn.vuejs.org/guide/essentials/list.html -->
     <ul>
-        <li v-for="item in items">
+        <li v-for="(item, index) in items">
+            {{ index }}
             {{ item.id }}
             {{ item.name }}
         </li>
