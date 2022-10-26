@@ -1,7 +1,16 @@
 <script setup>
 // import { ref } from 'vue'
 let seen = true
-let items = [{ message: 'Foo' }, { message: 'Bar' }]
+let items = [
+    {
+        id: 1,
+        name: 'Foo',
+    },
+    {
+        id: 2,
+        name: 'Bar'
+    },
+]
 
 </script>
 
@@ -16,8 +25,24 @@ let items = [{ message: 'Foo' }, { message: 'Bar' }]
 
     <h2>for</h2>
     <!-- v-for 指令用于列表渲染。https://cn.vuejs.org/guide/essentials/list.html -->
-    <li v-for="item in items">
-        {{ item.message }}
-    </li>
+    <ul>
+        <li v-for="item in items">
+            {{ item.id }}
+            {{ item.name }}
+        </li>
+    </ul>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+            </tr>
+        </thead>
+        <tbody v-for="item in items">
+            <th>{{ item.id }}</th>
+            <th>{{ item.name }}</th>
+        </tbody>
+    </table>
 
 </template>

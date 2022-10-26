@@ -15,7 +15,3 @@ defineProps({
     <h1 class="green">{{ msg }}</h1>
   </div>
 </template>
-
-<style scoped>
-
-</style>

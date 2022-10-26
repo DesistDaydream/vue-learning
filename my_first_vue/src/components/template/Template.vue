@@ -12,13 +12,11 @@ let number = 10
 let ok = true
 let message = "Hello World"
 let id = "DesistDaydream"
-// 指令
-let seen = true
-
 </script>
 
 <!-- 官方文档，模板语法：https://cn.vuejs.org/guide/essentials/template-syntax.html -->
 <template>
+    <h1>Vue 模板基础示例</h1>
     <!-- 1. Text interpolation(文本插值) -->
     <!-- 最基本的数据绑定形式是文本插值，它使用的是 Mustache(双大括号) 语法：
     双大括号标签会被替换为相应组件实例中 msg 属性的值。同时每次 msg 属性更改时它也会同步更新。-->
