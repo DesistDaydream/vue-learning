@@ -22,6 +22,11 @@ const router = createRouter({
       name: "directives",
       component: () => import("../components/directives/Directives.vue"),
     },
+    {
+      path: "/directives/event",
+      name: "event",
+      component: () => import("../components/directives/Event.vue"),
+    },
   ],
 })
 
