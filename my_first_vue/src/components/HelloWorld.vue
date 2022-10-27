@@ -10,3 +10,6 @@ let msg = "Hello Vue!"
   </div>
 </template>
 
+<style scoped>
+
+</style>

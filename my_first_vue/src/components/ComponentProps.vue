@@ -13,6 +13,6 @@ defineProps({
     <p>{{ msg }}</p>
 </template>
 
-<style>
+<style scoped>
 
 </style>
