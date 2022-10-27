@@ -1,4 +1,5 @@
 <script setup>
+import DirectivesRoute from './Route.vue'
 import { ref } from 'vue'
 
 // 初始化表单中的变量，设为空
@@ -10,6 +11,8 @@ function commit(params) {
 </script>
 
 <template>
+    <DirectivesRoute />
+
     <h1>表单输入绑定</h1>
     <p>使用 v-model 指令可以简化 JavaScript 处理表单的逻辑。</p>
     <p>通过 v-model 指令在 input、textarea、select 这几个表单标签中创建双向数据绑定</p>

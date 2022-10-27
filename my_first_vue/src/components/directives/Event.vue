@@ -1,4 +1,5 @@
 <script setup>
+import DirectivesRoute from './Route.vue'
 // ref() 将传入参数的值包装为一个带 .value 属性的 ref 对象：
 import { ref } from 'vue'
 
@@ -20,6 +21,8 @@ function clickArgs(params) {
 </script>
 
 <template>
+    <DirectivesRoute />
+
     <h1>事件触发</h1>
     <p>使用 v-on 指令（简写为 @）监听 DOM 事件，并在触发事件时执行一些 JavaScript。</p>
 

@@ -1,4 +1,6 @@
 <script setup>
+import DirectivesRoute from './Route.vue'
+
 let seen = true
 let items = [
     {
@@ -14,11 +16,7 @@ let items = [
 </script>
 
 <template>
-    <nav>
-        <RouterLink to="/directives">指令</RouterLink> |
-        <RouterLink to="/directives/event">事件</RouterLink> |
-        <RouterLink to="/directives/form">表单</RouterLink> |
-    </nav>
+    <DirectivesRoute />
 
     <h1>指令</h1>
     指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多<a href="https://cn.vuejs.org/api/built-in-directives.html">内置指令</a>，包括
