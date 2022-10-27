@@ -4,8 +4,11 @@ import { ref } from 'vue'
 
 // 初始化表单中的变量，设为空
 let message = ref('')
+let resp = ref({})
 
 function commit(params) {
+    console.log(params)
+    resp.value = JSON.parse(params)
 }
 
 </script>
@@ -19,10 +22,9 @@ function commit(params) {
     <p>v-model 指令会监听用户的输入事件来更新数据，并在特殊场景下执行特殊处理</p>
 
     卡组：<textarea v-model="message" placeholder="输入内容" cols="45" rows="5"></textarea>
-    <button @click="commit">提交</button>
+    <button @click="commit(message)">提交</button>
     <!-- 双向绑定，表单中的数据可以被 script 和 template 都读取到 -->
     <p>表单内容: {{ message }}</p>
-
 
     <table border="1">
         <thead>
@@ -31,7 +33,10 @@ function commit(params) {
                 <th>集换价</th>
             </tr>
         </thead>
-        <tr id="resp_price"></tr>
+        <tr>
+            <th>{{ resp.min_price }}</th>
+            <th>{{ resp.avg_price }}</th>
+        </tr>
     </table>
 
     <table border="1">
@@ -44,6 +49,14 @@ function commit(params) {
                 <th>集换价</th>
             </tr>
         </thead>
-        <tbody id="cards_list"></tbody>
+        <tbody>
+            <tr v-for="(item, _) in resp.data">
+                <th>{{ item.sc_name }}</th>
+                <th>{{ item.count }}</th>
+                <th>{{ item.serial }}</th>
+                <th>{{ item.min_price }} </th>
+                <th>{{ item.avg_price }} </th>
+            </tr>
+        </tbody>
     </table>
 </template>
