@@ -1,25 +1,35 @@
-<!-- 这里是 Vue 程序的根组件。这个跟根组件被绑定到了 index.html 中 id=app 的 div 元素上
-也就是说，这就是说，根组件即代表了整个页面 -->
+<!-- 这里是 Vue 程序的**根组件**。这个根组件被绑定到了 index.html 中 id=app 的 div 元素上
+对于 index.html 来说，body 中只有一个 div 元素。也就是说，这个根组件即代表了整个 index.html 页面 -->
+
+<!-- 每个组件可以分为三部分：<script>、<template>、<style> -->
+<!-- <script> 标签中是该组件的运行逻辑，通常为 JS 或 TS 代码 -->
 <script setup>
-
-// 路由功能不建议刚开始就使用，可以通过导入多个组件来体验 Vue 的组件化开发能力
-import { RouterLink, RouterView } from 'vue-router'
-
 // 导入组件。这些组件作为根组件的下级组件
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
-import HelloWorld from './components/hello_world/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue'
 import ComponentTwo from './components/ComponentTwo.vue'
 import ComponentThree from './components/ComponentThree.vue'
+import ComponentProps from './components/ComponentProps.vue'
 
+// 路由功能不建议刚开始就使用，可以先通过导入多个组件来体验 Vue 的组件化开发能力
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
+<!-- <template> 标签中是该组件的模板，也就是说应该在页面展示的内容是什么样子的
+    模板与下面的样式将会被 Vue 渲染成 HTML 页面 -->
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
+    <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
+    <nav>
+      <RouterLink to="/home">首页</RouterLink> |
+      <RouterLink to="/template">模板</RouterLink> |
+      <RouterLink to="/directives">指令</RouterLink>
+    </nav>
 
     <div class="wrapper">
-      <!-- 调用 HelloWorld 组件。并将 msg 变量的值传入到 HelloWorld 组件中 -->
-      <HelloWorld msg="You did it!" />
+      <!-- 调用 HelloWorld 组件。 -->
+      <HelloWorld />
       <!-- 调用第二个组件 -->
       <ComponentTwo />
       <!-- 调用第三个组件 -->
@@ -28,15 +38,16 @@ import ComponentThree from './components/ComponentThree.vue'
       <ComponentTwo />
       <!-- 可以调用多个组件以拼出来整个页面 -->
 
-      <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
-      <nav>
-        <RouterLink to="/">Hemo</RouterLink> |
-        <RouterLink to="/template">模板</RouterLink> |
-        <RouterLink to="/directives">指令</RouterLink>
-      </nav>
+      <!-- 其他组件调用 -->
+      <ComponentProps msg="组件之间的交互传递的数据" />
     </div>
   </header>
 
   <RouterView />
 </template>
 
+<!-- <style> 标签中是该组件的样式。若添加了 scoped 属性，则表示该样式只在当前组件中生效。
+    否则，这个样式将会被全局应用到，不管是父级还是子级的其他组件 -->
+<style>
+
+</style>
