@@ -1,3 +1,3 @@
 <template>
-    组件三
+    <p>组件三</p>
 </template>
