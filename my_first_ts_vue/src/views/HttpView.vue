@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import Axios from "../components/http/axios/Axios.vue"
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="http">
+    <Axios />
   </div>
 </template>
 
