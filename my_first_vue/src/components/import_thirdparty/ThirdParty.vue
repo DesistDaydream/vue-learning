@@ -1,5 +1,5 @@
 <script setup>
-import ThirdRoute from './Route.vue'
+import ThirdRoute from "./Route.vue"
 </script>
 
 <template>
@@ -7,6 +7,4 @@ import ThirdRoute from './Route.vue'
     <!-- <ThirdRoute /> -->
 </template>
 
-<style>
-
-</style>
+<style></style>

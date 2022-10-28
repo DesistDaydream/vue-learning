@@ -6,13 +6,13 @@
 <script setup>
 // 导入组件。这些组件作为根组件的下级组件
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
-import HelloWorld from './components/HelloWorld.vue'
-import ComponentTwo from './components/ComponentTwo.vue'
-import ComponentThree from './components/ComponentThree.vue'
-import ComponentProps from './components/ComponentProps.vue'
+import HelloWorld from "./components/HelloWorld.vue"
+import ComponentTwo from "./components/ComponentTwo.vue"
+import ComponentThree from "./components/ComponentThree.vue"
+import ComponentProps from "./components/ComponentProps.vue"
 
 // 路由功能不建议刚开始就使用，可以先通过导入多个组件来体验 Vue 的组件化开发能力
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router"
 </script>
 
 <!-- <template> 标签中是该组件的模板，也就是说应该在页面展示的内容是什么样子的
@@ -41,13 +41,12 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterLink to="/home">首页</RouterLink> |
     <RouterLink to="/template">模板</RouterLink> |
     <RouterLink to="/directives">指令</RouterLink> |
-    <RouterLink to="/third">第三方组件</RouterLink>
+    <RouterLink to="/third">第三方组件</RouterLink> |
+    <RouterLink to="/http">HTTP请求</RouterLink>
   </nav>
   <RouterView />
 </template>
 
 <!-- <style> 标签中是该组件的样式。若添加了 scoped 属性，则表示该样式只在当前组件中生效。
     否则，这个样式将会被全局应用到，不管是父级还是子级的其他组件 -->
-<style>
-
-</style>
+<style></style>
