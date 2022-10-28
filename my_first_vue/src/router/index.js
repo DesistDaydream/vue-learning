@@ -32,6 +32,16 @@ const router = createRouter({
       name: "form",
       component: () => import("../components/directives/Form.vue"),
     },
+    {
+      path: "/third",
+      name: "third",
+      component: () => import("../components/import_thirdparty/ThirdParty.vue"),
+    },
+    {
+      path: "/third/table",
+      name: "thirdtable",
+      component: () => import("../components/import_thirdparty/Table.vue"),
+    },
   ],
 })
 

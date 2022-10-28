@@ -19,15 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
     模板与下面的样式将会被 Vue 渲染成 HTML 页面 -->
 <template>
   <header>
-    <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
-    <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
-    <nav>
-      <RouterLink to="/home">首页</RouterLink> |
-      <RouterLink to="/template">模板</RouterLink> |
-      <RouterLink to="/directives">指令</RouterLink>
-    </nav>
-
-    <div class="wrapper">
+    <div>
       <!-- 调用 HelloWorld 组件。 -->
       <HelloWorld />
       <!-- 调用第二个组件 -->
@@ -43,6 +35,14 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
 
+  <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
+  <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
+  <nav>
+    <RouterLink to="/home">首页</RouterLink> |
+    <RouterLink to="/template">模板</RouterLink> |
+    <RouterLink to="/directives">指令</RouterLink> |
+    <RouterLink to="/third">第三方组件</RouterLink>
+  </nav>
   <RouterView />
 </template>
 

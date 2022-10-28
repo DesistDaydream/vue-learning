@@ -60,3 +60,37 @@ function commit(params) {
         </tbody>
     </table>
 </template>
+
+<!-- 表单中填入的示例数据 -->
+<!--
+{
+    "min_price": "110.61",
+    "avg_price": "222.60",
+    "data": [
+        {
+            "count": 3,
+            "serial": "ST4-01",
+            "sc_name": "年糕兽",
+            "alternative_art": "否",
+            "min_price": "0.30",
+            "avg_price": "1.50"
+        },
+        {
+            "count": 2,
+            "serial": "BT3-004",
+            "sc_name": "蓑虫兽",
+            "alternative_art": "否",
+            "min_price": "1.00",
+            "avg_price": "3.80"
+        },
+        {
+            "count": 4,
+            "serial": "BT1-064",
+            "sc_name": "哥布林兽",
+            "alternative_art": "否",
+            "min_price": "0.04",
+            "avg_price": "2.00"
+        }
+    ]
+}
+-->

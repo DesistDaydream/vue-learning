@@ -6,10 +6,16 @@ import router from "./router"
 // 导入样式
 import "./assets/main.css"
 
+// 第三方导入
+import Vue3EasyDataTable from 'vue3-easy-data-table';
+import 'vue3-easy-data-table/dist/style.css';
+
 // ######################################################################################
 // 3.######## 每个 Vue 应用都是通过 createApp() 函数创建一个新的应用实例开始的！！！ #########
 // ######################################################################################
 let newAPP = createApp(App)
+
+newAPP.component('EasyDataTable', Vue3EasyDataTable);
 
 // 让应用实例使用路由，这是一种单页路由模式，在切换页面时，其实只是显示和隐藏，加快页面浏览效果
 // 这个功能不算基础功能了，不建议刚开始学习就使用。
