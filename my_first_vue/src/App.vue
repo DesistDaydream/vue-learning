@@ -71,7 +71,7 @@ import { RouterLink, RouterView } from "vue-router"
 
 <!-- <style> 标签中是该组件的样式。若添加了 scoped 属性，则表示该样式只在当前组件中生效。
     否则，这个样式将会被全局应用到，不管是父级还是子级的其他组件 -->
-<style>
+<style scoped>
 ul {
   border-radius: 15px; /* 圆角 */
   list-style-type: none;
