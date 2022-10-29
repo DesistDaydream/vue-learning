@@ -37,16 +37,91 @@ import { RouterLink, RouterView } from "vue-router"
 
   <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
   <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
-  <nav>
-    <RouterLink to="/home">首页</RouterLink> |
-    <RouterLink to="/template">模板</RouterLink> |
-    <RouterLink to="/directives">指令</RouterLink> |
-    <RouterLink to="/third">第三方组件</RouterLink> |
-    <RouterLink to="/http">HTTP请求</RouterLink>
-  </nav>
+  <ul>
+    <li>
+      <RouterLink to="/home">首页</RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/template">模板</RouterLink>
+    </li>
+    <li>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">指令</a>
+        <div class="dropdown-content">
+          <RouterLink to="/directives">指令</RouterLink>
+          <RouterLink to="/directives/event">事件</RouterLink>
+          <RouterLink to="/directives/form">表单</RouterLink>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">第三方组件</a>
+        <div class="dropdown-content">
+          <RouterLink to="/third">第三方组件</RouterLink>
+          <RouterLink to="/third/table">表格</RouterLink>
+        </div>
+      </div>
+    </li>
+    <li><RouterLink to="/http">HTTP请求</RouterLink></li>
+  </ul>
+
   <RouterView />
 </template>
 
 <!-- <style> 标签中是该组件的样式。若添加了 scoped 属性，则表示该样式只在当前组件中生效。
     否则，这个样式将会被全局应用到，不管是父级还是子级的其他组件 -->
-<style></style>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #111;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>

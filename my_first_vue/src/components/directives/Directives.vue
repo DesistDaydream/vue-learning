@@ -1,6 +1,4 @@
 <script setup>
-import DirectivesRoute from "./Route.vue"
-
 let seen = true
 let items = [
   {
@@ -15,8 +13,6 @@ let items = [
 </script>
 
 <template>
-  <DirectivesRoute />
-
   <h1>指令</h1>
   <div>
     指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多<a
