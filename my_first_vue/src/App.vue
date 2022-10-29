@@ -37,6 +37,7 @@ import { RouterLink, RouterView } from "vue-router"
 
   <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
   <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
+  <!-- 导航栏与下拉菜单示例来源：http://www.manongjc.com/runcode/358.html -->
   <ul>
     <li>
       <RouterLink to="/home">首页</RouterLink>
