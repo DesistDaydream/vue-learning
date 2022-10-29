@@ -73,6 +73,7 @@ import { RouterLink, RouterView } from "vue-router"
     否则，这个样式将会被全局应用到，不管是父级还是子级的其他组件 -->
 <style>
 ul {
+  border-radius: 15px; /* 圆角 */
   list-style-type: none;
   margin: 0;
   padding: 0;
