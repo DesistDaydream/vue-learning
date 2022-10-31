@@ -1,31 +1,32 @@
 <template>
-    <EasyDataTable :headers="headers" :items="items" />
+  <el-table :data="tableData" style="width: 100%">
+    <el-table-column prop="date" label="Date" width="180" />
+    <el-table-column prop="name" label="Name" width="180" />
+    <el-table-column prop="address" label="Address" />
+  </el-table>
 </template>
 
-<script lang="ts">
-// 第三方导入
-import "vue3-easy-data-table/dist/style.css"
-import type { Header, Item } from "vue3-easy-data-table"
-
-export default defineComponent({
-    setup() {
-        const headers: Header[] = [
-            { text: "Name", value: "name" },
-            { text: "Height (cm)", value: "height", sortable: true },
-            { text: "Weight (kg)", value: "weight", sortable: true },
-            { text: "Age", value: "age", sortable: true },
-        ]
-
-        const items: Item[] = [
-            { name: "Curry", height: 178, weight: 77, age: 20 },
-            { name: "James", height: 180, weight: 75, age: 21 },
-            { name: "Jordan", height: 181, weight: 73, age: 22 },
-        ]
-
-        return {
-            headers,
-            items,
-        }
-    },
-})
+<script lang="ts" setup>
+const tableData = [
+  {
+    date: "2016-05-03",
+    name: "Tom",
+    address: "No. 189, Grove St, Los Angeles",
+  },
+  {
+    date: "2016-05-02",
+    name: "Tom",
+    address: "No. 189, Grove St, Los Angeles",
+  },
+  {
+    date: "2016-05-04",
+    name: "Tom",
+    address: "No. 189, Grove St, Los Angeles",
+  },
+  {
+    date: "2016-05-01",
+    name: "Tom",
+    address: "No. 189, Grove St, Los Angeles",
+  },
+]
 </script>

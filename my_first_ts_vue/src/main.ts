@@ -6,10 +6,14 @@ import router from "./router"
 // 导入样式
 import "./assets/main.css"
 
+// 全局引入 Element Plus
+import ElementPlus from "element-plus"
+import "element-plus/dist/index.css"
+
 // ######################################################################################
 // 3.######## 每个 Vue 应用都是通过 createApp() 函数创建一个新的应用实例开始的！！！ #########
 // ######################################################################################
-let newAPP = createApp(App)
+let app = createApp(App)
 
 // 让应用实例使用路由，这是一种单页路由模式，在切换页面时，其实只是显示和隐藏，加快页面浏览效果
 // 这个功能不算基础功能了，不建议刚开始学习就使用。
@@ -18,12 +22,15 @@ let newAPP = createApp(App)
 //     "vue": "^3.2.38",
 //     "vue-router": "^4.1.5"
 //   },
-newAPP.use(router)
+app.use(router)
 // 路由器功能必须要在实例调用 mount() 方法前调用。
+
+// 使用 Element Plus UI 组件库
+app.use(ElementPlus)
 
 // mount() 方法将 App 挂载到 id=app 的 DOM 元素上, 并且返回一个 Vue 实例。
 // 此时，App 这个根组件就被关联到 id=app 的 DOM 元素上，所有组件中的代码，将会被渲染到该元素中，浏览器即可展示页面
-let vm = newAPP.mount("#app")
+let vm = app.mount("#app")
 // mount() 方法返回一个 Vue 实例，它可以被用来访问 App 中定义的的数据和方法。
 // 此时，我们在浏览器的 Console 、本地代码中，使用 vm.message="Hello Vue!" 以改变 message 的值
 console.log(vm)
