@@ -2,20 +2,22 @@
 import axios from "axios"
 import { ref } from "vue"
 
-axios.defaults.withCredentials = false
-
 let respBody: any = ref({})
 
-let req = axios({
+let promise = axios({
   method: "get",
-  // url: "/api/FingerUnion/list.php",
   url: "http://iwenwiki.com/api/blueberrypai/getChengpinDetails.php",
 })
 
-req.then((resp) => {
+promise.then((resp) => {
   console.log(resp.data)
   respBody.value = resp.data
 })
+
+// req.then((resp: AxiosResponse) => {
+//   console.log(resp.data)
+//   respBody.value = resp.data
+// })
 </script>
 
 <template>
