@@ -7,9 +7,6 @@
 // 导入组件。这些组件作为根组件的下级组件
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
 import HelloWorld from "./components/HelloWorld.vue"
-import ComponentTwo from "./components/ComponentTwo.vue"
-import ComponentThree from "./components/ComponentThree.vue"
-import ComponentProps from "./components/ComponentProps.vue"
 
 // 路由功能不建议刚开始就使用，可以先通过导入多个组件来体验 Vue 的组件化开发能力
 import { RouterLink, RouterView } from "vue-router"
@@ -22,16 +19,6 @@ import { RouterLink, RouterView } from "vue-router"
     <div>
       <!-- 调用 HelloWorld 组件。 -->
       <HelloWorld />
-      <!-- 调用第二个组件 -->
-      <ComponentTwo />
-      <!-- 调用第三个组件 -->
-      <ComponentThree />
-      <!-- 同一个组件可以重复调用 -->
-      <ComponentTwo />
-      <!-- 可以调用多个组件以拼出来整个页面 -->
-
-      <!-- 其他组件调用 -->
-      <ComponentProps msg="组件之间的交互传递的数据" />
     </div>
   </header>
 
@@ -39,12 +26,10 @@ import { RouterLink, RouterView } from "vue-router"
   <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
   <!-- 导航栏与下拉菜单示例来源：http://www.manongjc.com/runcode/358.html -->
   <ul>
-    <li>
-      <RouterLink to="/home">首页</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/template">模板</RouterLink>
-    </li>
+    <li><RouterLink to="/home">首页</RouterLink></li>
+
+    <li><RouterLink to="/template">模板</RouterLink></li>
+
     <li>
       <div class="dropdown">
         <RouterLink to="/directives">指令</RouterLink>
@@ -54,6 +39,9 @@ import { RouterLink, RouterView } from "vue-router"
         </div>
       </div>
     </li>
+
+    <li><RouterLink to="/components">组件</RouterLink></li>
+
     <li>
       <div class="dropdown">
         <a href="#" class="dropbtn">第三方组件</a>
@@ -63,6 +51,7 @@ import { RouterLink, RouterView } from "vue-router"
         </div>
       </div>
     </li>
+
     <li><RouterLink to="/http">HTTP请求</RouterLink></li>
   </ul>
 

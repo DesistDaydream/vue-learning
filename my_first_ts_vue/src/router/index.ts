@@ -33,6 +33,11 @@ const router = createRouter({
       component: () => import("../components/directives/Form.vue"),
     },
     {
+      path: "/components",
+      name: "components",
+      component: () => import("../components/components/Components.vue"),
+    },
+    {
       path: "/third",
       name: "third",
       component: () => import("../components/import_thirdparty/ThirdParty.vue"),
