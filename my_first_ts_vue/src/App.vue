@@ -53,6 +53,7 @@ import { RouterLink, RouterView } from "vue-router"
     </li>
 
     <li><RouterLink to="/http">HTTP请求</RouterLink></li>
+    <li><RouterLink to="/test">测试页面</RouterLink></li>
   </ul>
 
   <RouterView />

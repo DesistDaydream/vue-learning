@@ -52,6 +52,11 @@ const router = createRouter({
       name: "http",
       component: () => import("../components/http_client/Http.vue"),
     },
+    {
+      path: "/test",
+      name: "test",
+      component: () => import("../components/test/Test.vue"),
+    },
   ],
 })
 

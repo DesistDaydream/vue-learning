@@ -13,7 +13,7 @@ export default defineConfig({
   },
   // 解决 axios 跨域问题
   server: {
-    // host: "0.0.0.0",
+    host: "0.0.0.0",
     proxy: {
       "/api": {
         target: "http://iwenwiki.com", //实际请求地址
