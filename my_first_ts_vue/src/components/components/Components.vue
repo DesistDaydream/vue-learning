@@ -2,7 +2,7 @@
 import { ref } from "vue"
 import ComponentTwo from "./ComponentTwo.vue"
 import ComponentThree from "./ComponentThree.vue"
-import Props from "./Props.vue"
+import PassingProps from "./PassingProps.vue"
 
 const Titles = ref([
   { id: 1, title: "我的 Vue 之旅" },
@@ -21,10 +21,14 @@ const Titles = ref([
     <ComponentTwo />
     <!-- 可以调用多个组件以拼出来整个页面 -->
 
-    <!-- 调用 Props 组件 -->
-    <Props Title="Props" Msg="组件之间的交互传递的数据" />
+    <!-- 传递 Props 示例 -->
+    <PassingProps Title="Props" Msg="组件之间的交互传递的数据" />
     <!-- 通过 v-for 指令多次调用组件，且多次传递 props -->
-    <Props v-for="t in Titles" :key="t.id" :Title="t.title"></Props>
+    <PassingProps
+      v-for="t in Titles"
+      :key="t.id"
+      :Title="t.title"
+    ></PassingProps>
   </div>
 </template>
 
