@@ -5,7 +5,7 @@
   props 全名 properties，是一种特别的 Attributes(属性)  -->
 <script setup lang="ts">
 // defineProps 是一个仅在 <script setup> 中可用的编译宏命令。
-// 声明的 props 会自动暴露给模板
+// 声明的 props 会自动暴露给模板，并且这些变量不用再通过 ref() 声明或赋值，这已经是响应式的了
 // defineProps({
 //   // 定义组件交互时传递数据的变量信息
 //   msg: {
@@ -24,8 +24,10 @@ const props = defineProps({
     type: String,
   },
 })
-
-console.log(props)
+console.log("Props返回值调用", props.title, props.msg)
+// 我们还可以通过解构赋值的方式获取 props 中的数据
+const { title, msg } = props
+console.log("解构赋值：", title, msg)
 </script>
 
 <template>

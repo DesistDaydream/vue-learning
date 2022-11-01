@@ -3,12 +3,15 @@ import { ref } from "vue"
 import ComponentTwo from "./ComponentTwo.vue"
 import ComponentThree from "./ComponentThree.vue"
 import PassingProps from "./PassingProps.vue"
+import ListeningEvents from "./ListeningEvents.vue"
 
 const Titles = ref([
   { id: 1, title: "我的 Vue 之旅" },
   { id: 2, title: "使用 Vue 写博客" },
   { id: 3, title: "为什么 Vue 如此有趣" },
 ])
+
+const titlesFontSize = ref(1)
 </script>
 
 <template>
@@ -29,6 +32,14 @@ const Titles = ref([
       :key="t.id"
       :title="t.title"
     ></PassingProps>
+    <!-- 监听事件 -->
+    <div :style="{ fontSize: titlesFontSize + 'em' }">
+      <ListeningEvents
+        msg="这次字体将会随着按钮点击而变化"
+        @enlarge-text="titlesFontSize += 0.1"
+        @reduce-text="titlesFontSize -= 0.1"
+      />
+    </div>
   </div>
 </template>
 
