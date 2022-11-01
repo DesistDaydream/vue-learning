@@ -22,7 +22,6 @@ const props = defineProps({
   },
   Msg: {
     type: String,
-    required: true,
   },
 })
 
