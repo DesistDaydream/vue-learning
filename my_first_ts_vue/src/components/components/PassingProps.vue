@@ -16,11 +16,11 @@
 
 // defineProps 会返回一个对象，该对象包含了所有 props 的类型定义。
 const props = defineProps({
-  Title: {
+  title: {
     type: String,
     required: true,
   },
-  Msg: {
+  msg: {
     type: String,
   },
 })
@@ -29,8 +29,8 @@ console.log(props)
 </script>
 
 <template>
-  <h1>{{ Title }}</h1>
-  <p>{{ Msg }}</p>
+  <h1>{{ title }}</h1>
+  <p>{{ msg }}</p>
 </template>
 
 <style scoped></style>
