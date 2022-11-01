@@ -9,7 +9,7 @@ import Props from "./Props.vue"
     <!-- 调用第二个组件 -->
     <ComponentTwo />
     <!-- 调用第三个组件 -->
-    <ComponentThree title="abc" />
+    <ComponentThree />
     <!-- 同一个组件可以重复调用 -->
     <ComponentTwo />
     <!-- 可以调用多个组件以拼出来整个页面 -->
