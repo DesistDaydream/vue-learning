@@ -30,6 +30,8 @@ import { RouterLink, RouterView } from "vue-router"
 
     <li><RouterLink to="/template">模板</RouterLink></li>
 
+    <li><RouterLink to="/reactivity">响应式</RouterLink></li>
+
     <li>
       <div class="dropdown">
         <RouterLink to="/directives">指令</RouterLink>

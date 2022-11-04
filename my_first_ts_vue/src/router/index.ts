@@ -15,7 +15,12 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../components/template/Template.vue"),
+      component: () => import("../components/1_template/Template.vue"),
+    },
+    {
+      path: "/reactivity",
+      name: "reactivity",
+      component: () => import("../components/2_reactivity/Reactivity.vue"),
     },
     {
       path: "/directives",
