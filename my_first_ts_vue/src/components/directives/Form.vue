@@ -1,11 +1,28 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue"
+
+interface Resp {
+  min_price: number
+  avg_price: number
+  data: RespData[]
+}
+interface RespData {
+  sc_name: string
+  count: string
+  serial: string
+  min_price: string
+  avg_price: string
+}
 
 // 初始化表单中的变量，设为空
 let message = ref("")
-let resp = ref({})
+let resp = ref<Resp>({
+  min_price: 0,
+  avg_price: 0,
+  data: [],
+})
 
-function commit(params) {
+function commit(params: string) {
   console.log(params)
   resp.value = JSON.parse(params)
 }

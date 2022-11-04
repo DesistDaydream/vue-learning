@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // ref() 将传入参数的值包装为一个带 .value 属性的 ref 对象：
 import { ref } from "vue"
 
@@ -6,7 +6,7 @@ const counter = ref(0)
 let message = ref("点击前内容")
 let args = ref("没有参数")
 
-function clickHandle(event) {
+function clickHandle(event: any) {
   message.value = "点击后内容"
 
   // event 是触发事件这个对象
@@ -14,7 +14,7 @@ function clickHandle(event) {
   event.target.innerHTML = "修改按钮名称"
 }
 
-function clickArgs(params) {
+function clickArgs(params: any) {
   args.value = params
 }
 </script>

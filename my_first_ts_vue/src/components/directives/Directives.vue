@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 let seen = true
 let items = [
   {

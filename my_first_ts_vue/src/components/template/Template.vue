@@ -1,15 +1,15 @@
 <script setup lang="ts">
 // 文本插值
-let msg = "文本插值"
+const msg: string = "文本插值"
 // 原始 HTML
-let rawHtml = "<a href='https://github.com/DesistDaydream'>DesistDaydream</a>"
+const rawHtml = "<a href='https://github.com/DesistDaydream'>DesistDaydream</a>"
 // 属性绑定
-let dynamicId = 102205
+const dynamicId = "102205"
 // 使用 JavaScript 表达式
-let number = 10
-let ok = true
-let message = "Hello World"
-let id = "DesistDaydream"
+const number = 10
+const ok = true
+const message = "Hello World"
+const id = "DesistDaydream"
 </script>
 
 <!-- 官方文档，模板语法：https://cn.vuejs.org/guide/essentials/template-syntax.html -->
