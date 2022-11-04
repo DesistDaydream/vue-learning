@@ -53,6 +53,12 @@ const router = createRouter({
       component: () => import("../components/http_client/Http.vue"),
     },
     {
+      path: "/lifecycle",
+      name: "lifecycle",
+      component: () =>
+        import("../components/lifecycle_hooks/LifecycleHooks.vue"),
+    },
+    {
       path: "/test",
       name: "test",
       component: () => import("../components/test/Test.vue"),
