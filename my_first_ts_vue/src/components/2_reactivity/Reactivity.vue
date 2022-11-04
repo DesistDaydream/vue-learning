@@ -18,32 +18,17 @@ const reactiveButton = () => {
 
 <template>
   <h1>响应式</h1>
-  <p>
-    <b>
-      <a
-        href="https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html"
-        >响应式</a
-      ></b
-    >
 
-    是 Vue
-    的<b>核心功能</b>之一，它可以让我们在数据发生变化时，自动更新页面中的内容。
-  </p>
-  <p>
-    在 Vue 中，响应式是通过 Proxy 实现的。Proxy 是 ES6
-    中新增的一个特性，它可以用来拦截对象的读写操作。
-  </p>
-  <p>在 Vue 中，我们可以通过 Proxy 来监听对象的读写操作，从而实现响应式。</p>
+  <!-- 响应式是 Vue 的核心功能之一，它可以让我们在数据发生变化时，自动更新页面中的内容。
+  在 Vue 中，响应式是通过 Proxy 实现的。Proxy 是 ES6 中新增的一个特性，它可以用来拦截对象的读写操作。
+  在 Vue 中，我们可以通过 Proxy 来监听对象的读写操作，从而实现响应式。 -->
 
   <h2>基本用法</h2>
   <p>
-    这是一个会变化的数据：{{ number }}
+    这是一个会变化的数据：<b>{{ number }}</b>
     <!-- 参见指令章节，@click 是 v-on:click 指令的简写，用以表示当发生点击事件时，会触发 reactiveButton 函数-->
-    <button @click="reactiveButton">按钮</button>
-  </p>
-
-  <p>
-    点击这个按钮，将会触发数据变化的逻辑，数据的变化将会通过响应式的方式展现在页面上。
+    点击<button @click="reactiveButton">按钮</button
+    >，将会触发数据变化的逻辑，数据的变化将会通过响应式的方式展现在页面上。
     每次点击按钮，都会触发一次数据变化的逻辑，可以在 F12
     的控制台中看到数据的变化。
   </p>
