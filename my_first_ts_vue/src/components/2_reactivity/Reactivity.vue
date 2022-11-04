@@ -49,4 +49,4 @@ const reactiveButton = () => {
   </p>
 </template>
 
-<style></style>
+<style scoped></style>
