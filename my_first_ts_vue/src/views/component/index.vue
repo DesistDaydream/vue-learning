@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import ComponentTwo from "./ComponentTwo.vue"
-import ComponentThree from "./ComponentThree.vue"
-import PassingProps from "./PassingProps.vue"
-import ListeningEvents from "./ListeningEvents.vue"
+import ComponentTwo from "@/components/3_components/ComponentTwo.vue"
+import ComponentThree from "@/components/3_components/ComponentThree.vue"
+import PassingProps from "@/components/3_components/PassingProps.vue"
+import ListeningEvents from "@/components/3_components/ListeningEvents.vue"
 
 const Titles = ref([
   { id: 1, title: "我的 Vue 之旅" },
