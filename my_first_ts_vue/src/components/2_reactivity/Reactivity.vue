@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, reactive } from "vue"
+import { ref, reactive, toRefs } from "vue"
 // 如果只是用标准方式声明了一个变量，这个变量的变化并不会被渲染到页面中。也就是说并不会被双向数据绑定
 // let number = 0
 // 我们可以使用 ref() 函数实例化一个 Ref<T = any> 接口，并将变量的值保存到接口中的 value 属性中。
@@ -14,6 +14,15 @@ const reactiveButton = () => {
 
   console.log("按钮被点了一次，当前 number 的值为：", number.value)
 }
+
+// 解构赋值
+let obj = {
+  name: "张三",
+  age: 18,
+}
+let objRef = reactive(obj)
+let { name, age } = toRefs(objRef)
+name.value = "解构后赋值"
 </script>
 
 <template>
@@ -30,6 +39,12 @@ const reactiveButton = () => {
     每次点击按钮，都会触发一次数据变化的逻辑，可以在 F12
     的控制台中看到数据的变化。
   </p>
+
+  <h2>解构</h2>
+  <div>
+    {{ name }}
+    {{ age }}
+  </div>
 </template>
 
 <style scoped></style>
