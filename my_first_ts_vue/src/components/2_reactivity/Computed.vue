@@ -11,7 +11,7 @@ const author = reactive({
 })
 
 // 一个计算属性 ref
-const publishedBooksMessage = computed(() => {
+const publishedBooksMessage = computed<string>(() => {
   return author.books.length > 0 ? "Yes" : "No"
 })
 </script>
