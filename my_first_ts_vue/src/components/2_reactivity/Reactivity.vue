@@ -21,6 +21,8 @@ let obj = {
   age: 18,
 }
 let objRef = reactive(obj)
+// 使用 toRefs() 函数解构 reactive() 函数声明的对象, 得到对象的每个属性的响应式的对象
+// 解构出来的对象需要使用 .value 的方式进行操作
 let { name, age } = toRefs(objRef)
 name.value = "解构后赋值"
 </script>
