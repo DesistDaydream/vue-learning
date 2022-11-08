@@ -3,6 +3,7 @@ import { ref } from "vue"
 import Reactivity from "@/components/2_reactivity/Reactivity.vue"
 import RefGetElement from "@/components/2_reactivity/RefGetElement.vue"
 import RefAndReactiveVue from "@/components/2_reactivity/RefAndReactive.vue"
+import Watch from "@/components/2_reactivity/Watch.vue"
 </script>
 
 <template>
@@ -17,6 +18,10 @@ import RefAndReactiveVue from "@/components/2_reactivity/RefAndReactive.vue"
 
   <div>
     <RefAndReactiveVue />
+  </div>
+
+  <div>
+    <Watch />
   </div>
 </template>
 
