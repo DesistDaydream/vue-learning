@@ -17,7 +17,6 @@ nextTick(() => {
 </script>
 
 <template>
-  <h2>使用 ref() 函数获取页面中的元素</h2>
   <div>
     <p ref="op">p标签</p>
   </div>

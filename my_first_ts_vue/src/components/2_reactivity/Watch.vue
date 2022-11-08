@@ -48,7 +48,6 @@ watchEffect(() => {
 </script>
 
 <template>
-  <h2>监听数据变化</h2>
   <div>
     <p>数字1: {{ numOne }}</p>
     <p>数字2: {{ numTwo }}</p>

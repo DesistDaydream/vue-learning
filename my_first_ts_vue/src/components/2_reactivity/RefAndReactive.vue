@@ -22,7 +22,6 @@ console.log("reactive() 函数获取的对象：", objReactive)
 </script>
 
 <template>
-  <h2>ref() 与 reactive() 的区别</h2>
   <div></div>
 </template>
 
