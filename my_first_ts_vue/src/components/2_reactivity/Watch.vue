@@ -43,6 +43,7 @@ watchEffect(() => {
       obj.value.age
   )
   console.log("watchEffect 监听的数据", numOne.value)
+  // 这里没引用 numTwo，所以不会被监听
 })
 </script>
 
