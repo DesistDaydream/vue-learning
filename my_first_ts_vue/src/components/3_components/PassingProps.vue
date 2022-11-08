@@ -1,29 +1,10 @@
-<!-- 组件之间的交互 -->
-<!-- 如果我们正在构建一个博客，我们可能需要一个表示博客文章的组件。
-  我们希望所有的博客文章分享相同的视觉布局，但有不同的内容。
-  要实现这样的效果自然必须向组件中传递数据，例如每篇文章标题和内容，这就会使用到 props。
-  props 全名 properties，是一种特别的 Attributes(属性)  -->
 <script setup lang="ts">
-// defineProps 是一个仅在 <script setup> 中可用的编译宏命令。
-// 声明的 props 会自动暴露给模板，并且这些变量不用再通过 ref() 声明或赋值，这已经是响应式的了
-// defineProps({
-//   // 定义组件交互时传递数据的变量信息
-//   msg: {
-//     type: String,
-//     required: true,
-//   },
-// })
-
+// 通过接收 defineProps 的返回值，以调用传入的 props
 // defineProps 会返回一个对象，该对象包含了所有 props 的类型定义。
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  msg: {
-    type: String,
-  },
-})
+const props = defineProps<{
+  title: string
+  msg?: string
+}>()
 console.log("Props返回值调用", props.title, props.msg)
 // 我们还可以通过解构赋值的方式获取 props 中的数据
 const { title, msg } = props
@@ -31,7 +12,7 @@ console.log("解构赋值：", title, msg)
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <h3>{{ title }}</h3>
   <p>{{ msg }}</p>
 </template>
 
