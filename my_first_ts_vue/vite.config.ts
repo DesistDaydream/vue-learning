@@ -8,6 +8,10 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
+      // 让我们在导入时使用可以使用 @ 符号作为 src 目录的别名，而不是相对路径，比如：
+      // import App from '@/App.vue'
+      // 而不是
+      // import App from '../../App.vue'
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
