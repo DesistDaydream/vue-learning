@@ -30,6 +30,8 @@ const reduceText = () => {
 
 <template>
   <p>{{ msg }}</p>
+  <!-- click 事件将会调用 enlrgeText 函数，
+    函数中将会触发 enlarge-text 事件 -->
   <button @click="enlargeText">放大字体</button>
   <button @click="reduceText">缩小字体</button>
 </template>

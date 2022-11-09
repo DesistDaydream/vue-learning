@@ -2,7 +2,7 @@
 import { ref } from "vue"
 import PassingPropsDemo from "@/components/3_components/passing_props/PassingPropsDemo.vue"
 import PassingPropsDemoWithVfor from "@/components/3_components/passing_props/PassingPropsDemoWithVfor.vue"
-import PassingPropsListeningEvents from "@/components/3_components/passing_props/PassingPropsListeningEvents.vue"
+import PassingPropsWithCustomEvent from "@/components/3_components/passing_props/PassingPropsWithCustomEvent.vue"
 
 // 通过 v-for 指令传递 Props
 const Titles = ref([
@@ -46,7 +46,7 @@ const reduceText = () => {
     <div :style="{ fontSize: titlesFontSize + 'em' }">
       <!-- 调用组件时，可以使用在子组建中声明的自定义的事件名称
       以触发事件处理逻辑 -->
-      <PassingPropsListeningEvents
+      <PassingPropsWithCustomEvent
         msg="这次字体将会随着按钮点击而变化"
         @enlarge-text="enlargeText"
         @reduce-text="reduceText"
