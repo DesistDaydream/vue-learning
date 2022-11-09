@@ -50,7 +50,7 @@ const router = createRouter({
     {
       path: "/third/table",
       name: "thirdtable",
-      component: () => import("@/components/import_thirdparty/Table.vue"),
+      component: () => import("@/views/third_party/table/index.vue"),
     },
     {
       path: "/http",

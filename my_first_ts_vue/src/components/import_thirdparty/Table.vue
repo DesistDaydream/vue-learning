@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Paging from "./Paging.vue"
 const tableData = [
   {
     date: "2016-05-03",
@@ -30,8 +29,4 @@ const tableData = [
     <el-table-column prop="name" label="Name" width="180" />
     <el-table-column prop="address" label="Address" />
   </el-table>
-
-  <div>
-    <Paging />
-  </div>
 </template>
