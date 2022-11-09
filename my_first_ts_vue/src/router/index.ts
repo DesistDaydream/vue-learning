@@ -43,7 +43,7 @@ const router = createRouter({
       component: () => import("@/views/component/index.vue"),
     },
     {
-      path: "/template/props",
+      path: "/components/props",
       name: "props",
       component: () => import("@/views/component/passing_props/index.vue"),
     },
