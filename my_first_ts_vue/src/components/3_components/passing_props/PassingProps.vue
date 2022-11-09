@@ -4,13 +4,21 @@ import PassingPropsDemo from "@/components/3_components/passing_props/PassingPro
 import PassingPropsDemoWithVfor from "@/components/3_components/passing_props/PassingPropsDemoWithVfor.vue"
 import PassingPropsListeningEvents from "@/components/3_components/passing_props/PassingPropsListeningEvents.vue"
 
+// 通过 v-for 指令传递 Props
 const Titles = ref([
   { id: 1, title: "我的 Vue 之旅" },
   { id: 2, title: "使用 Vue 写博客" },
   { id: 3, title: "为什么 Vue 如此有趣" },
 ])
 
+// 子组件使用 emit 触发事件通知父组件
 const titlesFontSize = ref(1)
+const enlargeText = () => {
+  titlesFontSize.value += 0.2
+}
+const reduceText = () => {
+  titlesFontSize.value -= 0.2
+}
 </script>
 
 <template>
@@ -36,10 +44,12 @@ const titlesFontSize = ref(1)
     </p>
     <!-- 监听事件 -->
     <div :style="{ fontSize: titlesFontSize + 'em' }">
+      <!-- 调用组件时，可以使用在子组建中声明的自定义的事件名称
+      以触发事件处理逻辑 -->
       <PassingPropsListeningEvents
         msg="这次字体将会随着按钮点击而变化"
-        @enlarge-text="titlesFontSize += 0.1"
-        @reduce-text="titlesFontSize -= 0.1"
+        @enlarge-text="enlargeText"
+        @reduce-text="reduceText"
       />
     </div>
   </div>

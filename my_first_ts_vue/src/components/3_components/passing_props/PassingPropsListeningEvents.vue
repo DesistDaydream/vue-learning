@@ -3,17 +3,27 @@ defineProps<{
   msg: string
 }>()
 
-// 声明触发的事件
+// 声明触发事件
 const emit = defineEmits<{
+  // 创建一个名为 enlarge-text 的事件
   (event: "enlarge-text"): void
+  // 创建一个名为 reduce-text 的事件
   (event: "reduce-text"): void
 }>()
+// 创建的事件可以在父组件中使用 v-on 指令监听：
+// v-on:enlarge-text="处理逻辑"
+// v-on:reduce-text="处理逻辑"
+// v-on: 可以简写为 @
+// @enlarge-text="处理逻辑"
+// @reduce-text="处理逻辑"
 
-// 点击事件
+// 在点击事件的处理逻辑中，调用 emit 声明的事件
 const enlargeText = () => {
+  // 调用 emit 中名为 enlarge-text 的事件
   emit("enlarge-text")
 }
 const reduceText = () => {
+  // 调用 emit 中名为 reduce-text 的事件
   emit("reduce-text")
 }
 </script>
@@ -24,4 +34,4 @@ const reduceText = () => {
   <button @click="reduceText">缩小字体</button>
 </template>
 
-<style></style>
+<style scoped></style>
