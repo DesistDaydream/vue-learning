@@ -45,7 +45,7 @@ const router = createRouter({
     {
       path: "/third",
       name: "third",
-      component: () => import("@/components/import_thirdparty/ThirdParty.vue"),
+      component: () => import("@/views/third_party/ThirdParty.vue"),
     },
     {
       path: "/third/table",

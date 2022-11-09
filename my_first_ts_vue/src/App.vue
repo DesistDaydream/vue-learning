@@ -22,44 +22,45 @@ import { RouterLink, RouterView } from "vue-router"
     </div>
   </header>
 
-  <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
-  <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
-  <!-- 导航栏与下拉菜单示例来源：http://www.manongjc.com/runcode/358.html -->
-  <ul>
-    <li><RouterLink to="/home">首页</RouterLink></li>
+  <div>
+    <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
+    <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
+    <!-- 导航栏与下拉菜单示例来源：http://www.manongjc.com/runcode/358.html -->
+    <ul>
+      <li><RouterLink to="/home">首页</RouterLink></li>
 
-    <li><RouterLink to="/template">模板</RouterLink></li>
+      <li><RouterLink to="/template">模板</RouterLink></li>
 
-    <li><RouterLink to="/reactivity">响应式</RouterLink></li>
+      <li><RouterLink to="/reactivity">响应式</RouterLink></li>
 
-    <li>
-      <div class="dropdown">
-        <RouterLink to="/directives">指令</RouterLink>
-        <div class="dropdown-content">
-          <RouterLink to="/directives/event">事件</RouterLink>
-          <RouterLink to="/directives/form">表单</RouterLink>
+      <li>
+        <div class="dropdown">
+          <RouterLink to="/directives">指令</RouterLink>
+          <div class="dropdown-content">
+            <RouterLink to="/directives/event">事件</RouterLink>
+            <RouterLink to="/directives/form">表单</RouterLink>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li><RouterLink to="/components">组件</RouterLink></li>
+      <li><RouterLink to="/components">组件</RouterLink></li>
 
-    <li>
-      <div class="dropdown">
-        <a href="#" class="dropbtn">第三方组件</a>
-        <div class="dropdown-content">
-          <RouterLink to="/third">第三方组件</RouterLink>
-          <RouterLink to="/third/table">表格</RouterLink>
+      <li>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">第三方组件</a>
+          <div class="dropdown-content">
+            <RouterLink to="/third">第三方组件</RouterLink>
+            <RouterLink to="/third/table">表格</RouterLink>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li><RouterLink to="/http">HTTP请求</RouterLink></li>
-    <li><RouterLink to="/lifecycle">生命周期钩子</RouterLink></li>
-    <li><RouterLink to="/test">测试页面</RouterLink></li>
-  </ul>
-
-  <RouterView />
+      <li><RouterLink to="/http">HTTP请求</RouterLink></li>
+      <li><RouterLink to="/lifecycle">生命周期钩子</RouterLink></li>
+      <li><RouterLink to="/test">测试页面</RouterLink></li>
+    </ul>
+    <RouterView />
+  </div>
 </template>
 
 <!-- <style> 标签中是该组件的样式。若添加了 scoped 属性，则表示该样式只在当前组件中生效。
@@ -102,6 +103,8 @@ li a:hover,
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* 防止下拉菜单被遮挡 */
+  z-index: 999;
 }
 
 .dropdown-content a {

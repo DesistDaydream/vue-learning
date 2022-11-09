@@ -13,15 +13,6 @@ const handleCurrentChange = (val: number) => {
 }
 </script>
 
-<style scoped>
-.demo-pagination-block + .demo-pagination-block {
-  margin-top: 10px;
-}
-.demo-pagination-block .demonstration {
-  margin-bottom: 16px;
-}
-</style>
-
 <template>
   <div class="flex items-center mb-4">
     <div>
@@ -46,3 +37,12 @@ const handleCurrentChange = (val: number) => {
     />
   </div>
 </template>
+
+<style scoped>
+.demo-pagination-block + .demo-pagination-block {
+  margin-top: 10px;
+}
+.demo-pagination-block .demonstration {
+  margin-bottom: 16px;
+}
+</style>
