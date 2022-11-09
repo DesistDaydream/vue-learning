@@ -29,7 +29,14 @@ import { RouterLink, RouterView } from "vue-router"
     <ul>
       <li><RouterLink to="/home">首页</RouterLink></li>
 
-      <li><RouterLink to="/template">模板</RouterLink></li>
+      <li>
+        <div class="dropdown">
+          <RouterLink to="/template">模板</RouterLink>
+          <div class="dropdown-content">
+            <RouterLink to="/template/props">Props传递</RouterLink>
+          </div>
+        </div>
+      </li>
 
       <li><RouterLink to="/reactivity">响应式</RouterLink></li>
 

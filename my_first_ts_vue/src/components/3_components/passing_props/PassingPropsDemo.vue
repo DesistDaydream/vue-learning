@@ -16,8 +16,8 @@ defineProps<{
 </script>
 
 <template>
-  <h4>{{ title }}</h4>
-  <p>{{ msg }}</p>
+  <h5>标题：{{ title }}</h5>
+  <p>内容：{{ msg }}</p>
 </template>
 
 <style scoped></style>
