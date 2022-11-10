@@ -38,6 +38,12 @@ const router = createRouter({
       component: () => import("@/components/directives/Form.vue"),
     },
     {
+      path: "/directives/v-model",
+      name: "v-model",
+      component: () =>
+        import("@/components/directives/v-model/PassingProps.vue"),
+    },
+    {
       path: "/components",
       name: "components",
       component: () => import("@/views/component/index.vue"),
@@ -67,11 +73,11 @@ const router = createRouter({
       name: "lifecycle",
       component: () => import("@/views/lifecycle_hooks/index.vue"),
     },
-    {
-      path: "/example/select",
-      name: "example-select",
-      component: () => import("@/views/example/select/index.vue"),
-    },
+    // {
+    //   path: "/example/select",
+    //   name: "example-select",
+    //   component: () => import("@/views/example/select/index.vue"),
+    // },
 
     {
       path: "/test",

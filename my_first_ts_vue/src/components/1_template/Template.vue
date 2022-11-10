@@ -23,13 +23,16 @@ const id = "DesistDaydream"
   <!-- 2. 原始 HTML -->
   <!-- 双大括号会将数据解释为纯文本，而不是 HTML。若想插入 HTML，需要使用 v-html 指令： -->
   <p>插入 HTML(使用文本插值): {{ rawHtml }}</p>
-  <p>插入 HTML(使用 v-html 指令): <span v-html="rawHtml"></span></p>
+  <p>
+    插入 HTML(使用 v-html 指令):
+    <span v-html="rawHtml"></span>
+  </p>
   <!-- ！！！注意：在网站上动态渲染任意 HTML 是非常危险的，因为这非常容易造成 XSS 漏洞。请仅在内容安全可信时再使用 v-html，并且永远不要使用用户提供的 HTML 内容。 -->
 
   <!-- 3. Attribute(属性) 绑定 -->
   <!-- 双大括号无法应用在“标签的属性”中，如果想要只渲染属性，则使用 v-bind 指令： -->
   <div v-bind:id="dynamicId">查看该元素标签的属性，以查看属性绑定示例</div>
-  <!-- v-bind 可以省略，只使用一个冒号即可 -->
+  <!-- v-bind 可以省略，只使用一个冒号表示即可，简写为 :id -->
 
   <!-- 4. 使用 JavaScript 表达式 -->
   <!-- 可以在双大括号中使用 JavaScript 表达式。注意：仅支持“单一表达式”，不要使用复杂的 -->

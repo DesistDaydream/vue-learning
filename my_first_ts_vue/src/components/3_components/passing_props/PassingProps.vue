@@ -2,7 +2,7 @@
 import { ref } from "vue"
 import PassingPropsDemo from "@/components/3_components/passing_props/PassingPropsDemo.vue"
 import PassingPropsDemoWithVfor from "@/components/3_components/passing_props/PassingPropsDemoWithVfor.vue"
-import PassingPropsWithCustomEvent from "@/components/3_components/passing_props/PassingPropsWithCustomEvent.vue"
+import PassingPropsWithCustomEvent from "@/components/3_components/passing_props/CustomEvent.vue"
 
 // 通过 v-for 指令传递 Props
 const Titles = ref([
