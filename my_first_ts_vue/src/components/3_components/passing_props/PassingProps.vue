@@ -45,8 +45,9 @@ const reduceText = (valFromSub: number) => {
     </p>
     <!-- 监听事件 -->
     <div :style="{ fontSize: titlesFontSize + 'em' }">
-      <!-- 调用组件时，可以使用在子组建中声明的自定义的事件名称
-      以触发事件处理逻辑 -->
+      <!-- 调用组件时，可以监听子组件中声明的自定义事件
+        子组件可以使用 emit() 函数触发事件，从而通知父组件
+        这里监听了名为 enlarge-text 和 reduce-text 的自定义事件 -->
       <PassingPropsWithCustomEvent
         msg="这次字体将会随着按钮点击而变化"
         @enlarge-text="enlargeText"

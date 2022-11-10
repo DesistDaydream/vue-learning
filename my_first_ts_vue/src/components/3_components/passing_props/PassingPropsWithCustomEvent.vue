@@ -19,13 +19,16 @@ const emit = defineEmits<{
 
 // 在点击事件的处理逻辑中，调用 emit 声明的事件
 const enlargeText = () => {
-  // 调用 emit 中名为 enlarge-text 的事件
+  // 调用 emit()  函数触发名为 enlarge-text 的事件。
   emit("enlarge-text")
 }
 const reduceText = () => {
-  // 调用 emit 中名为 reduce-text 的事件，并传递一个数字类型的参数
+  // 调用 emit() 函数触发名为 reduce-text 的事件，并传递一个数字类型的参数
   emit("reduce-text", 0.4)
 }
+// 若父组件监听了这些自定义，将会在父组件中触发处理逻辑。
+// 这里可以理解为**事件透传**，触发 click 事件后，触发 enlarge-text 事件，父组件监听 enlarge-text 事件后，触发父组件的处理逻辑。
+// 在父组件中，本质上其实就是监听了 click 事件。
 </script>
 
 <template>
