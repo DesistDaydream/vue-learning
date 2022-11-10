@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import Table from "@/components/import_thirdparty/Table.vue"
-import Paging from "@/components/import_thirdparty/Paging.vue"
+import Table from "@/views/import_thirdparty/Table.vue"
+import Paging from "@/views/import_thirdparty/Paging.vue"
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"
-import Home from "@/components/home/Home.vue"
+import Home from "@/views/home/Home.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,43 +15,48 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("@/components/1_template/Template.vue"),
-    },
-    {
-      path: "/reactivity",
-      name: "reactivity",
-      component: () => import("@/views/reactivity/index.vue"),
+      component: () => import("@/views/1_template/index.vue"),
     },
     {
       path: "/directives",
       name: "directives",
-      component: () => import("@/components/directives/Directives.vue"),
+      component: () => import("@/views/1_template/directives/Directives.vue"),
     },
     {
       path: "/directives/event",
       name: "event",
-      component: () => import("@/components/directives/Event.vue"),
+      component: () => import("@/views/1_template/directives/Event.vue"),
     },
     {
       path: "/directives/form",
       name: "form",
-      component: () => import("@/components/directives/Form.vue"),
+      component: () => import("@/views/1_template/directives/Form.vue"),
     },
     {
       path: "/directives/v-model",
       name: "v-model",
       component: () =>
-        import("@/components/directives/v-model/PassingProps.vue"),
+        import("@/views/1_template/directives/v-model/PassingProps.vue"),
+    },
+    {
+      path: "/reactivity",
+      name: "reactivity",
+      component: () => import("@/views/2_reactivity/index.vue"),
     },
     {
       path: "/components",
       name: "components",
-      component: () => import("@/views/component/index.vue"),
+      component: () => import("@/views/3_components/index.vue"),
     },
     {
       path: "/components/props",
       name: "props",
-      component: () => import("@/views/component/passing_props/index.vue"),
+      component: () => import("@/views/3_components/props/index.vue"),
+    },
+    {
+      path: "/components/events",
+      name: "events",
+      component: () => import("@/views/3_components/events/index.vue"),
     },
     {
       path: "/third",
@@ -60,29 +65,23 @@ const router = createRouter({
     },
     {
       path: "/third/table",
-      name: "thirdtable",
+      name: "third-table",
       component: () => import("@/views/third_party/table/index.vue"),
     },
     {
       path: "/http",
       name: "http",
-      component: () => import("@/components/http_client/Http.vue"),
+      component: () => import("@/views/http_client/Http.vue"),
     },
     {
       path: "/lifecycle",
       name: "lifecycle",
       component: () => import("@/views/lifecycle_hooks/index.vue"),
     },
-    // {
-    //   path: "/example/select",
-    //   name: "example-select",
-    //   component: () => import("@/views/example/select/index.vue"),
-    // },
-
     {
       path: "/test",
       name: "test",
-      component: () => import("@/components/test/Test.vue"),
+      component: () => import("@/views/test/Test.vue"),
     },
   ],
 })

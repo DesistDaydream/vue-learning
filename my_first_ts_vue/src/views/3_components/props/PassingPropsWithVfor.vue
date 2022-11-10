@@ -12,7 +12,7 @@ console.log("解构赋值：", title, msg)
 </script>
 
 <template>
-  <h5>标题：{{ title }}</h5>
+  <h4>标题：{{ title }}</h4>
   <p>内容：{{ msg }}</p>
 </template>
 

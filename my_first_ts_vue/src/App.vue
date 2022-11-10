@@ -6,10 +6,17 @@
 <script setup lang="ts">
 // 导入组件。这些组件作为根组件的下级组件
 // 我们可以通过注释这几行导入，查看这些组件都对应页面的哪些部分
-import HelloWorld from "./components/HelloWorld.vue"
+import HelloWorld from "./views/HelloWorld.vue"
 
 // 路由功能不建议刚开始就使用，可以先通过导入多个组件来体验 Vue 的组件化开发能力
 import { RouterLink, RouterView } from "vue-router"
+
+// 使用 element plus 的导航栏
+import { ref } from "vue"
+const activeIndex = ref()
+const handleSelect = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
 </script>
 
 <!-- <template> 标签中是该组件的模板，也就是说应该在页面展示的内容是什么样子的
@@ -22,61 +29,79 @@ import { RouterLink, RouterView } from "vue-router"
     </div>
   </header>
 
-  <div class="menu">
-    <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
-    <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
-    <!-- 导航栏与下拉菜单示例来源：http://www.manongjc.com/runcode/358.html -->
-    <ul>
-      <li><RouterLink to="/home">首页</RouterLink></li>
+  <!-- Vue 的路由器功能。可以在单个 html 中达到切换标签页功能的能力 -->
+  <!-- 初学 Vue 不要关注这部分内容，这是 Vue 单页应用的特点，先研究完其他的有概念了之后再看 Vue 路由功能 -->
+  <el-menu
+    :default-active="activeIndex"
+    router
+    class="el-menu-demo"
+    mode="horizontal"
+    background-color="#545c64"
+    text-color="#fff"
+    active-text-color="#ffd04b"
+    @select="handleSelect"
+  >
+    <el-menu-item index="home" route="/home">首页</el-menu-item>
 
-      <li><RouterLink to="/template">模板</RouterLink></li>
-
-      <li><RouterLink to="/reactivity">响应式</RouterLink></li>
-
-      <li>
-        <div class="dropdown">
-          <RouterLink to="/components">组件</RouterLink>
-          <div class="dropdown-content">
-            <RouterLink to="/components/props">Props传递</RouterLink>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="dropdown">
+    <el-sub-menu index="template">
+      <template #title>模板</template>
+      <el-menu-item index="template" route="/template">模板基础</el-menu-item>
+      <el-sub-menu index="directives">
+        <template #title>
           <RouterLink to="/directives">指令</RouterLink>
-          <div class="dropdown-content">
-            <RouterLink to="/directives/event">事件</RouterLink>
-            <RouterLink to="/directives/form">表单</RouterLink>
-            <RouterLink to="/directives/v-model">v-model</RouterLink>
-          </div>
-        </div>
-      </li>
+        </template>
+        <el-menu-item index="directives-event" route="/directives/event">
+          事件
+        </el-menu-item>
+        <el-menu-item index="directives-form" route="/directives/form">
+          表单
+        </el-menu-item>
+        <el-menu-item index="directives-v-model" route="/directives/v-model">
+          v-model
+        </el-menu-item>
+        <el-sub-menu index="3-1">
+          <template #title>第三项</template>
+        </el-sub-menu>
+      </el-sub-menu>
+    </el-sub-menu>
 
-      <li>
-        <div class="dropdown">
-          <a href="#" class="dropbtn">第三方组件</a>
-          <div class="dropdown-content">
-            <RouterLink to="/third">第三方组件</RouterLink>
-            <RouterLink to="/third/table">表格</RouterLink>
-          </div>
-        </div>
-      </li>
+    <el-menu-item index="reactivity" route="/reactivity">响应式</el-menu-item>
 
-      <li><RouterLink to="/http">HTTP请求</RouterLink></li>
-      <li><RouterLink to="/lifecycle">生命周期钩子</RouterLink></li>
-      <li>
-        <div class="dropdown">
-          <a href="#" class="dropbtn">案例</a>
-          <!-- <div class="dropdown-content">
-            <RouterLink to="/example/select">全选/全不选</RouterLink>
-          </div> -->
-        </div>
-      </li>
-      <li><RouterLink to="/test">测试页面</RouterLink></li>
-    </ul>
-    <RouterView />
-  </div>
+    <el-sub-menu index="components">
+      <template #title><RouterLink to="/components">组件</RouterLink></template>
+      <el-sub-menu index="props">
+        <template #title>
+          <RouterLink to="/components/props">Props</RouterLink>
+        </template>
+        <el-menu-item index="props-validation">Props校验</el-menu-item>
+      </el-sub-menu>
+      <el-sub-menu index="events">
+        <template #title>
+          <RouterLink to="/components/events">事件(自定义事件)</RouterLink>
+        </template>
+        <el-menu-item index="events-validation">事件校验</el-menu-item>
+      </el-sub-menu>
+    </el-sub-menu>
+
+    <el-sub-menu index="third">
+      <template #title>第三方组件</template>
+      <el-menu-item index="third" route="/third">第三方组件</el-menu-item>
+      <el-menu-item index="third-table" route="/third/table">表格</el-menu-item>
+      <el-sub-menu index="2-1">
+        <template #title>第二项</template>
+      </el-sub-menu>
+    </el-sub-menu>
+
+    <el-menu-item index="http" route="/http">HTTP请求</el-menu-item>
+
+    <el-menu-item index="lifecycle" route="/lifecycle">
+      生命周期钩子
+    </el-menu-item>
+
+    <el-menu-item index="test" route="/test">测试页面</el-menu-item>
+  </el-menu>
+
+  <RouterView />
 </template>
 
 <!-- <style> 标签中是该组件的样式。若添加了 scoped 属性，则表示该样式只在当前组件中生效。
@@ -84,57 +109,15 @@ import { RouterLink, RouterView } from "vue-router"
 <style scoped>
 ul {
   border-radius: 15px; /* 圆角 */
-  list-style-type: none;
+  /* list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0; */
   overflow: hidden;
-  background-color: #333;
 }
 
-li {
-  float: left;
-}
-
-li a,
-.dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+/* RouterLink 的文本会被渲染成 a 标签，通过对 a 标签的设置，来这是带链接的字符串的样式 */
+a {
   text-decoration: none;
-}
-
-li a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #111;
-}
-
-.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /* 防止下拉菜单被遮挡 */
-  z-index: 999;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+  color: #fff;
 }
 </style>

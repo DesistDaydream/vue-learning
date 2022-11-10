@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import ComponentTwo from "@/components/3_components/ComponentTwo.vue"
-import ComponentThree from "@/components/3_components/ComponentThree.vue"
+import {} from "vue"
+import ComponentTwo from "@/components/ComponentTwo.vue"
+import ComponentThree from "@/components/ComponentThree.vue"
 </script>
 
 <template>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import Reactivity from "@/components/2_reactivity/Reactivity.vue"
-import RefGetElement from "@/components/2_reactivity/RefGetElement.vue"
-import RefAndReactiveVue from "@/components/2_reactivity/RefAndReactive.vue"
-import Watch from "@/components/2_reactivity/Watch.vue"
-import Computed from "@/components/2_reactivity/Computed.vue"
+import Reactivity from "@/views/2_reactivity/Reactivity.vue"
+import RefGetElement from "@/views/2_reactivity/RefGetElement.vue"
+import RefAndReactiveVue from "@/views/2_reactivity/RefAndReactive.vue"
+import Watch from "@/views/2_reactivity/Watch.vue"
+import Computed from "@/views/2_reactivity/Computed.vue"
 </script>
 
 <template>

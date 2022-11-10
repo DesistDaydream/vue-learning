@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue"
-import LifecycleHooks from "@/components/lifecycle_hooks/LifecycleHooks.vue"
+import LifecycleHooks from "./LifecycleHooks.vue"
 </script>
 
 <template>
