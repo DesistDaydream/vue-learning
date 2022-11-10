@@ -64,6 +64,14 @@ import { RouterLink, RouterView } from "vue-router"
 
       <li><RouterLink to="/http">HTTP请求</RouterLink></li>
       <li><RouterLink to="/lifecycle">生命周期钩子</RouterLink></li>
+      <li>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">案例</a>
+          <!-- <div class="dropdown-content">
+            <RouterLink to="/example/select">全选/全不选</RouterLink>
+          </div> -->
+        </div>
+      </li>
       <li><RouterLink to="/test">测试页面</RouterLink></li>
     </ul>
     <RouterView />

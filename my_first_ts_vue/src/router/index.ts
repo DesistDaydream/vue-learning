@@ -68,6 +68,12 @@ const router = createRouter({
       component: () => import("@/views/lifecycle_hooks/index.vue"),
     },
     {
+      path: "/example/select",
+      name: "example-select",
+      component: () => import("@/views/example/select/index.vue"),
+    },
+
+    {
       path: "/test",
       name: "test",
       component: () => import("@/components/test/Test.vue"),
