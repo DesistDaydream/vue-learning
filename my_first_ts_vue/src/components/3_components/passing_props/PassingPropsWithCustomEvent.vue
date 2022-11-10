@@ -7,8 +7,8 @@ defineProps<{
 const emit = defineEmits<{
   // 创建一个名为 enlarge-text 的事件
   (event: "enlarge-text"): void
-  // 创建一个名为 reduce-text 的事件
-  (event: "reduce-text"): void
+  // 创建一个名为 reduce-text 的事件，且该事件触发时可以接收一个数字类型的参数
+  (event: "reduce-text", val: number): void
 }>()
 // 创建的事件可以在父组件中使用 v-on 指令监听：
 // v-on:enlarge-text="处理逻辑"
@@ -23,8 +23,8 @@ const enlargeText = () => {
   emit("enlarge-text")
 }
 const reduceText = () => {
-  // 调用 emit 中名为 reduce-text 的事件
-  emit("reduce-text")
+  // 调用 emit 中名为 reduce-text 的事件，并传递一个数字类型的参数
+  emit("reduce-text", 0.4)
 }
 </script>
 

@@ -16,8 +16,9 @@ const titlesFontSize = ref(1)
 const enlargeText = () => {
   titlesFontSize.value += 0.2
 }
-const reduceText = () => {
-  titlesFontSize.value -= 0.2
+// 子组件中声明的事件带有参数，那么父组件中监听该事件时，可以获取到子组件传递的参数
+const reduceText = (valFromSub: number) => {
+  titlesFontSize.value -= valFromSub
 }
 </script>
 
