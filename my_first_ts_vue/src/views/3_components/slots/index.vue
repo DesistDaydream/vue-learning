@@ -13,6 +13,7 @@ import ScopedSlotsChild from "./ScopedSlots.vue"
     Props。 这时可以使用 Slots 来实现。
   </p>
 
+  <h2>基本示例</h2>
   <div>
     <SlotsChild>
       这一部分称为

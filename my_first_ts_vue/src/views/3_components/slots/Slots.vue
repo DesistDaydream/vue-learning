@@ -3,7 +3,6 @@ import {} from "vue"
 </script>
 
 <template>
-  <h2>基本示例</h2>
   <div>
     <!-- 当子组件被调用时，子组件中 <slot> 元素将会被父组件的插槽内容替换掉。
     而 slot 元素中的内容将不会显示  -->
