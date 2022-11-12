@@ -47,17 +47,15 @@ const handleSelect = (key: string, keyPath: string[]) => {
       <template #title>模板</template>
       <el-menu-item index="template" route="/template">模板基础</el-menu-item>
       <el-sub-menu index="directives">
-        <template #title>
-          <RouterLink to="/directives">指令</RouterLink>
-        </template>
+        <template #title>指令</template>
+        <el-menu-item index="directives" route="/directives">
+          指令基础
+        </el-menu-item>
         <el-menu-item index="directives-event" route="/directives/event">
           事件
         </el-menu-item>
         <el-menu-item index="directives-form" route="/directives/form">
           表单
-        </el-menu-item>
-        <el-menu-item index="directives-v-model" route="/directives/v-model">
-          v-model
         </el-menu-item>
         <el-sub-menu index="3-1">
           <template #title>第三项</template>
@@ -80,6 +78,12 @@ const handleSelect = (key: string, keyPath: string[]) => {
           <RouterLink to="/components/events">事件(自定义事件)</RouterLink>
         </template>
         <el-menu-item index="events-validation">事件校验</el-menu-item>
+      </el-sub-menu>
+      <el-sub-menu index="slots">
+        <template #title>
+          <RouterLink to="/components/slots">插槽</RouterLink>
+        </template>
+        <el-menu-item index="slots-other">其他</el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
 

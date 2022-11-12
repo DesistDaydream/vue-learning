@@ -3,6 +3,7 @@ import {} from "vue"
 </script>
 
 <template>
+  <h1>插槽</h1>
   <div></div>
 </template>
 

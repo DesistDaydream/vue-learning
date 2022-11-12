@@ -24,19 +24,13 @@ const router = createRouter({
     },
     {
       path: "/directives/event",
-      name: "event",
+      name: "directives-event",
       component: () => import("@/views/1_template/directives/Event.vue"),
     },
     {
       path: "/directives/form",
-      name: "form",
+      name: "directives-form",
       component: () => import("@/views/1_template/directives/Form.vue"),
-    },
-    {
-      path: "/directives/v-model",
-      name: "v-model",
-      component: () =>
-        import("@/views/1_template/directives/v-model/PassingProps.vue"),
     },
     {
       path: "/reactivity",
@@ -50,13 +44,18 @@ const router = createRouter({
     },
     {
       path: "/components/props",
-      name: "props",
+      name: "components-props",
       component: () => import("@/views/3_components/props/index.vue"),
     },
     {
       path: "/components/events",
-      name: "events",
+      name: "components-events",
       component: () => import("@/views/3_components/events/index.vue"),
+    },
+    {
+      path: "/components/slots",
+      name: "components-slots",
+      component: () => import("@/views/3_components/slots/index.vue"),
     },
     {
       path: "/third",
