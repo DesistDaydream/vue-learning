@@ -1,6 +1,6 @@
 // 导入 vue 模块以使用 createApp() 函数
 import { createApp } from "vue"
-// 2. 导入的 App.vue 文件需要在下面使用 Vue 模块中的 createApp() 函数创建出一个 Vue 应用的**根组件**
+// 2. 导入的 App.vue 文件需要在下面使用 Vue 模块中的 createApp() 函数创建出一个 Vue 应用，参数就是的**根组件**
 import App from "./App.vue"
 import router from "./router"
 // 导入样式

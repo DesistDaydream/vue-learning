@@ -10,4 +10,9 @@ let msg = "Hello Vue!"
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  /* 居中 */
+  text-align: center;
+}
+</style>
