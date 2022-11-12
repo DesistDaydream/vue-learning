@@ -45,7 +45,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
     <el-sub-menu index="template">
       <template #title>模板</template>
+
       <el-menu-item index="template" route="/template">模板基础</el-menu-item>
+
       <el-sub-menu index="directives">
         <template #title>指令</template>
         <el-menu-item index="directives" route="/directives">
@@ -67,18 +69,21 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
     <el-sub-menu index="components">
       <template #title><RouterLink to="/components">组件</RouterLink></template>
+
       <el-sub-menu index="props">
         <template #title>
           <RouterLink to="/components/props">Props</RouterLink>
         </template>
         <el-menu-item index="props-validation">Props校验</el-menu-item>
       </el-sub-menu>
+
       <el-sub-menu index="events">
         <template #title>
           <RouterLink to="/components/events">事件(自定义事件)</RouterLink>
         </template>
         <el-menu-item index="events-validation">事件校验</el-menu-item>
       </el-sub-menu>
+
       <el-sub-menu index="slots">
         <template #title>
           <RouterLink to="/components/slots">插槽</RouterLink>
@@ -89,8 +94,11 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
     <el-sub-menu index="third">
       <template #title>第三方组件</template>
+
       <el-menu-item index="third" route="/third">第三方组件</el-menu-item>
+
       <el-menu-item index="third-table" route="/third/table">表格</el-menu-item>
+
       <el-sub-menu index="2-1">
         <template #title>第二项</template>
       </el-sub-menu>
