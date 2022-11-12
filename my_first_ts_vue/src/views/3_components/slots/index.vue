@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {} from "vue"
 import SlotsChild from "./Slots.vue"
+import NamedSlotsChild from "./NamedSlots.vue"
 </script>
 
 <template>
@@ -17,6 +18,24 @@ import SlotsChild from "./Slots.vue"
       slot 元素替换掉。这里称之为**插槽内容**，而子组件中的 slot
       元素称为**插槽出口**。
     </SlotsChild>
+  </div>
+
+  <div>
+    <NamedSlotsChild>
+      <!-- v-slot 指令指定插槽的 ID，这部分内容将会代替 NamedSlotsChild 这个子组建中 ID 为 header 的 <slot> 元素 -->
+      <template v-slot:header>
+        <h3>头</h3>
+      </template>
+
+      <!-- 当一个组件同时接收默认插槽和具名插槽时，所有位于顶级的非 <template> 元素都被隐式地视为默认插槽的内容。 -->
+      内容
+
+      <!-- v-slot 指令可以简写为 # -->
+      <!-- 这部分的意思是：将这部分模板片段传入子组件中的 footer 插槽中 -->
+      <template #footer>
+        <h4>尾</h4>
+      </template>
+    </NamedSlotsChild>
   </div>
 </template>
 

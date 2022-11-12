@@ -1,5 +1,6 @@
 {
     "tabWidth": 2,
     "semi": false,
-    "htmlWhitespaceSensitivity": "ignore"
+    "htmlWhitespaceSensitivity": "ignore",
+    "bracketSameLine": true
 }
