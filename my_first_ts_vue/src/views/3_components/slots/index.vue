@@ -43,10 +43,12 @@ import ScopedSlotsChild from "./ScopedSlots.vue"
   <h2>Scoped Slots(插槽作用域)</h2>
   <div>
     <h3>匿名插槽作用域</h3>
-    对于匿名插槽，可以通过 v-slot 指令声明一个接收插槽数据的对象，名为
-    slotProps。这里面的 v-slot="slotProps" 其实相当于
-    v-slot:default="slotProps"。这个对象专门用来接收插槽数据，即 slot
-    标签上的标签属性，作为自己的属性
+    <p>
+      对于匿名插槽，可以通过 v-slot 指令声明一个接收插槽数据的对象，名为
+      slotProps。这里面的 v-slot="slotProps" 其实相当于
+      v-slot:default="slotProps"。这个对象专门用来接收插槽数据，即 slot
+      标签上的标签属性，作为自己的属性
+    </p>
     <ScopedSlotsChild v-slot="slotProps">
       {{ slotProps.text }} {{ slotProps.count }}
     </ScopedSlotsChild>
