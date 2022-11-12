@@ -3,7 +3,6 @@ import {} from "vue"
 </script>
 
 <template>
-  <h2>具名插槽</h2>
   <p>
     子组件若包含多个 slot 元素，那么这些 slot
     将会如何确定自己将要接收的插槽内容是什么呢？
