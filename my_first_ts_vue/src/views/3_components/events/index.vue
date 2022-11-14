@@ -31,8 +31,7 @@ let num = ref(20)
     <PassingPropsWithCustomEvent
       msg="这次字体将会随着按钮点击而变化"
       @enlarge-text="enlargeText"
-      @reduce-text="reduceText"
-    />
+      @reduce-text="reduceText"></PassingPropsWithCustomEvent>
   </div>
 
   <h2>使用 v-model 指令让子组件中主动与父组件交互</h2>
