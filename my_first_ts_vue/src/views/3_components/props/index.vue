@@ -15,16 +15,14 @@ const Titles = ref([
   <h2>Props 传递</h2>
   <PassingPropsDemo
     title="组件之间的交互传递的数据"
-    msg="组件之间的交互传递的数据"
-  />
+    msg="组件之间的交互传递的数据" />
 
   <h2>通过 v-for 传递 Props</h2>
   <!-- 通过 v-for 指令多次调用组件，且多次传递 props -->
   <PassingPropsDemoWithVfor
     v-for="t in Titles"
     :key="t.id"
-    :title="t.title"
-  ></PassingPropsDemoWithVfor>
+    :title="t.title"></PassingPropsDemoWithVfor>
 </template>
 
 <style scoped></style>

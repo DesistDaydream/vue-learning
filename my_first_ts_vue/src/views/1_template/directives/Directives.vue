@@ -15,10 +15,9 @@ let items = [
 <template>
   <h1>指令</h1>
   <div>
-    指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多<a
-      href="https://cn.vuejs.org/api/built-in-directives.html"
-      >内置指令</a
-    >，包括 Template 组件中学习的 v-bind 和 v-html。 如果把 Vue
+    指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多
+    <a href="https://cn.vuejs.org/api/built-in-directives.html">内置指令</a>
+    ，包括 Template 组件中学习的 v-bind 和 v-html。 如果把 Vue
     当做一种新的编程语言，那指令，就是 Vue 语言的 Keyword(关键字)
   </div>
 
