@@ -16,8 +16,7 @@ defineProps<{
       <td>{{ item.name }}</td>
       <td>{{ item.age }}</td>
       <td>
-        <button>编辑</button>
-        <button>删除</button>
+        <slot name="buttons"></slot>
       </td>
     </tr>
   </table>
@@ -30,6 +29,7 @@ table {
 table,
 th,
 td {
+  /* 单元格边框样式 */
   border: 1px solid #000;
   border-collapse: collapse;
 }

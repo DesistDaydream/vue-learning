@@ -25,7 +25,18 @@ let state = reactive({
 <template>
   <h1>插槽案例</h1>
   <!-- 传递 list 这个 Prop -->
-  <TabelChild :list="state.list"></TabelChild>
+  <TabelChild :list="state.list">
+    <template #buttons>
+      <button>编辑</button>
+    </template>
+  </TabelChild>
+
+  <TabelChild :list="state.list">
+    <template #buttons>
+      <button>编辑</button>
+      <button>删除</button>
+    </template>
+  </TabelChild>
 </template>
 
 <style scoped></style>
