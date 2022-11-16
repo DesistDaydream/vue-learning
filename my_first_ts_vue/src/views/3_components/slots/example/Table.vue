@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {} from "vue"
-import type { Person } from "./models"
 defineProps<{
   list: { name: string; age: number }[]
 }>()
