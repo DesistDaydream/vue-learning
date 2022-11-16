@@ -39,8 +39,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b"
-    @select="handleSelect"
-  >
+    @select="handleSelect">
     <el-menu-item index="home" route="/home">首页</el-menu-item>
 
     <el-sub-menu index="template">
@@ -88,7 +87,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
         <template #title>
           <RouterLink to="/components/slots">插槽</RouterLink>
         </template>
-        <el-menu-item index="slots-other">其他</el-menu-item>
+        <el-menu-item index="slots-example" route="/components/slots/example">
+          案例
+        </el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
 

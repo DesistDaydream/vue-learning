@@ -58,6 +58,11 @@ const router = createRouter({
       component: () => import("@/views/3_components/slots/index.vue"),
     },
     {
+      path: "/components/slots/example",
+      name: "components-slots-example",
+      component: () => import("@/views/3_components/slots/example/index.vue"),
+    },
+    {
       path: "/third",
       name: "third",
       component: () => import("@/views/third_party/ThirdParty.vue"),

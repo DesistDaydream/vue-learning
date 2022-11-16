@@ -1,9 +1,31 @@
 <script setup lang="ts">
-import {} from "vue"
+import { reactive } from "vue"
+import TabelChild from "./Table.vue"
+
+let state = reactive({
+  name: "张三",
+  age: 18,
+  list: [
+    {
+      name: "张三",
+      age: 18,
+    },
+    {
+      name: "李四",
+      age: 19,
+    },
+    {
+      name: "王五",
+      age: 20,
+    },
+  ],
+})
 </script>
 
 <template>
-  <div></div>
+  <h1>插槽案例</h1>
+  <!-- 传递 list 这个 Prop -->
+  <TabelChild :list="state.list"></TabelChild>
 </template>
 
 <style scoped></style>

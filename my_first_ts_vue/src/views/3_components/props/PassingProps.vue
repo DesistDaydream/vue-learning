@@ -1,11 +1,8 @@
 <!-- 组件之间的交互 -->
-<!-- 如果我们正在构建一个博客，我们可能需要一个表示博客文章的组件。
-  我们希望所有的博客文章分享相同的视觉布局，但有不同的内容。
-  要实现这样的效果自然必须向组件中传递数据，例如每篇文章标题和内容，这就会使用到 props。
-  props 全名 properties，是一种特别的 Attributes(属性)  -->
 <script setup lang="ts">
 // defineProps 是一个仅在 <script setup> 中可用的编译宏命令。
 // 声明的 props 会自动暴露给模板，并且这些变量不用再通过 ref() 声明或赋值，这已经是响应式的了
+// 这里定义了两个 Props，title 和 msg，其中 msg 是可选的
 defineProps<{
   title: string
   // 使用 ? 表示该属性是可选的，即.可以不传递该属性
@@ -16,8 +13,9 @@ defineProps<{
 </script>
 
 <template>
-  <h5>标题：{{ title }}</h5>
-  <p>内容：{{ msg }}</p>
+  在模板中使用 Props
+  <p>名为 title 的 Prop 的值：{{ title }}</p>
+  <p>名为 msg 的 Prop 的值：{{ msg }}</p>
 </template>
 
 <style scoped></style>
