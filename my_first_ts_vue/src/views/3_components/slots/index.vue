@@ -15,6 +15,8 @@ import ScopedSlotsChild from "./ScopedSlots.vue"
 
   <h2>基本示例</h2>
   <div>
+    <!-- 子组件元素上有一个默认的 v-slot:default 属性。这是一个匿名插槽的默认属性，表示将子组件元素的内容插入到子组件中默认插槽中。
+    所有没有 name 属性的 slot 元素都属于**匿名插槽** -->
     <SlotsChild>
       这一部分称为
       **插槽内容**，这部分内容是在父组件中定义的，在调用子组件时，子组件元素中的内容会将子组件中的
@@ -45,8 +47,9 @@ import ScopedSlotsChild from "./ScopedSlots.vue"
   <div>
     <h3>匿名插槽作用域</h3>
     <p>
-      对于匿名插槽，可以通过 v-slot 指令声明一个接收插槽数据的对象，名为
-      slotProps。这里面的 v-slot="slotProps" 其实相当于
+      对于匿名插槽，可以通过 v-slot
+      指令声明一个接收插槽数据的对象，这里将对象命名为为 slotProps。这里面的
+      v-slot="slotProps" 其实相当于
       v-slot:default="slotProps"。这个对象专门用来接收插槽数据，即 slot
       标签上的标签属性，作为自己的属性
     </p>
