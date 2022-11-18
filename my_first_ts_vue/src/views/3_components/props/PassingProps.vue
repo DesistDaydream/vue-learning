@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-  在模板中使用 Props
+  <!-- 我们可以在在模板中直接使用 defineProps() 声明的 Props -->
   <p>名为 title 的 Prop 的值：{{ title }}</p>
   <p>名为 msg 的 Prop 的值：{{ msg }}</p>
 </template>
