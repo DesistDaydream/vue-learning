@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {} from "vue"
 defineProps<{
-  list: { name: string; age: number }[]
+  list: SlotTable[]
 }>()
 </script>
 
@@ -13,10 +13,10 @@ defineProps<{
       <th>操作</th>
     </tr>
     <tr v-for="(item, index) in list" :key="index">
-      <td>{{ item.name }}</td>
-      <td>{{ item.age }}</td>
+      <td>{{ item.Name }}</td>
+      <td>{{ item.Age }}</td>
       <td>
-        <slot name="buttons"></slot>
+        <slot name="buttons" :index="index"></slot>
       </td>
     </tr>
   </table>

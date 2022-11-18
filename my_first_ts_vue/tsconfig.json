@@ -1,13 +1,22 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "env.d.ts",
+    // 两个 * 表示任意层数的所有目录
+    "src/**/*",
+    "src/**/*.vue",
+    // 导出所有接口目录到全局
+    "src/api/**/*",
+  ],
   "compilerOptions": {
     "baseUrl": ".",
+    // 使用 import 导入时，我们可以通过 @/xxx 来代替 /src/xxx
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-
   "references": [
     {
       "path": "./tsconfig.config.json"

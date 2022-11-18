@@ -48,7 +48,7 @@ import ScopedSlotsChild from "./ScopedSlots.vue"
     <h3>匿名插槽作用域</h3>
     <p>
       对于匿名插槽，可以通过 v-slot
-      指令声明一个接收插槽数据的对象，这里将对象命名为为 slotProps。这里面的
+      指令声明一个接收插槽数据的对象，这里将对象命名为 slotProps。这里面的
       v-slot="slotProps" 其实相当于
       v-slot:default="slotProps"。这个对象专门用来接收插槽数据，即 slot
       标签上的标签属性，作为自己的属性
@@ -60,7 +60,19 @@ import ScopedSlotsChild from "./ScopedSlots.vue"
     <h3>具名插槽作用域</h3>
     <ScopedSlotsChild>
       <template #footer="slotProps">
-        <p>这是子组件传递过来的数据：{{ slotProps.msg }}</p>
+        <p>这是从子组件获取到的数据：{{ slotProps.msg }}</p>
+      </template>
+    </ScopedSlotsChild>
+
+    <h3>解构作用域直接获取子组建的值</h3>
+    <p>
+      在上面的示例中，我们可以不使用 `#footer="slotProps"`
+      这种形式获取子组建数据，而是直接解构，就像这样：`#footer="{ msg
+      }"`。即可不通过对象调用，从而直接获取到数据
+    </p>
+    <ScopedSlotsChild>
+      <template #footer="{ msg }">
+        <p>通过结构从子组件获取到的数据：{{ msg }}</p>
       </template>
     </ScopedSlotsChild>
   </div>
