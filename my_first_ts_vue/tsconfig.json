@@ -14,7 +14,7 @@
     // 注意：需要与 vite.config.ts 中的 resolve.alias 配置一致
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     }
   },
