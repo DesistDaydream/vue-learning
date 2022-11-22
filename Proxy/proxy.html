@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 使用 Proxy() 方法模拟 Vue 中的响应式功能 -->
+    <input type="text" id="ipt">
+    <p id="op"></p>
+
+    <script>
+        let obj = {
+            txtVal: "初始值"
+        }
+
+        function myReactive(obj) {
+            return new Proxy(obj, {
+                get(target, property, receiver) {
+                    return target[property]
+                },
+                set(target, property, value, receiver) {
+                    console.log("set", target, property, value, receiver)
+                    target[property] = value
+                }
+            })
+        }
+
+        let objReactive = myReactive(obj)
+
+        // 双向数据绑定
+        ipt.value = objReactive.txtVal
+        op.innerHTML = objReactive.txtVal
+
+        // 监听 input 的输入事件
+        ipt.addEventListener("input", e => {
+            objReactive.txtVal = e.target.value
+        })
+    </script>
+</body>
+
+</html>
