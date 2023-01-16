@@ -38,10 +38,7 @@ let allChecked = computed({
   },
   // set() 方法监听 allChecked 的变化。set() 中的参数的值是通过模板中的 v-model="allChecked" 传递过来的
   set(newValue) {
-    console.log(
-      "allChecked在页面被点击时，由于 v-model 导致数据变化，此时执行 set() 中的代码；此时 allChecked 的值为：",
-      newValue
-    )
+    console.log("allChecked在页面被点击时，由于 v-model 导致数据变化，此时执行 set() 中的代码；此时 allChecked 的值为：", newValue)
     // 这里的逻辑是将 data.checkList 中的每个元素都改为 allChecked 的值。如果 allChecked 为 true，那么每个元素都为 true，否则都为 false
     data.value.checkList = data.value.checkList.map(() => newValue)
   },
