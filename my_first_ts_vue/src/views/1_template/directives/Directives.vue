@@ -17,17 +17,13 @@ let items = [
   <div>
     指令是带有 v- 前缀的特殊 Attribute(属性)。Vue 提供了许多
     <a href="https://cn.vuejs.org/api/built-in-directives.html">内置指令</a>
-    ，包括 Template 组件中学习的 v-bind 和 v-html。 如果把 Vue
-    当做一种新的编程语言，那指令，就是 Vue 语言的 Keyword(关键字)
+    ，包括 Template 组件中学习的 v-bind 和 v-html。 如果把 Vue 当做一种新的编程语言，那指令，就是 Vue 语言的 Keyword(关键字)
   </div>
 
   <h2>if else</h2>
   <!-- v-if 与 v-else 指令 -->
   <!-- v-if 与 v-show 指令类型，但是又有区别，详见官方文档 -->
-  <p v-if="seen">
-    当 seen 变量为 {{ seen }} 时，将会展示本元素。注意，只要变量不为
-    false，则都为真，比如变量值为整型、字符串，甚至不传递变量值
-  </p>
+  <p v-if="seen">当 seen 变量为 {{ seen }} 时，将会展示本元素。注意，只要变量不为 false，则都为真，比如变量值为整型、字符串，甚至不传递变量值</p>
   <p v-else>当 seen 变量为 {{ seen }} 时，将会展示本元素</p>
 
   <h2>for</h2>
